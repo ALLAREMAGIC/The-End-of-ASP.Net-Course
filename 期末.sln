@@ -3,35 +3,51 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.33027.164
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "期末", "期末\", "{FB8EA39B-0DF6-4C25-91CE-6C15B0FF4AEC}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "EndofTerm.Web", "EndofTerm.Web\", "{C02A07FD-C1F7-42C4-A590-1C98E8AC772C}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6.2"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_60646"
-		Debug.AspNetCompiler.PhysicalPath = "期末\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_60646\"
+		ProjectReferences = "{dda00ebc-3533-42f4-87f0-637963ecc131}|EndofTerm.BLL.dll;{80A3DF72-6482-4109-8018-26F7B66AE83F}|EndofTerm.DAL.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_55167"
+		Debug.AspNetCompiler.PhysicalPath = "EndofTerm.Web\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_55167\"
 		Debug.AspNetCompiler.Updateable = "true"
 		Debug.AspNetCompiler.ForceOverwrite = "true"
 		Debug.AspNetCompiler.FixedNames = "false"
 		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_60646"
-		Release.AspNetCompiler.PhysicalPath = "期末\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_60646\"
+		Release.AspNetCompiler.VirtualPath = "/localhost_55167"
+		Release.AspNetCompiler.PhysicalPath = "EndofTerm.Web\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_55167\"
 		Release.AspNetCompiler.Updateable = "true"
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "60646"
-		SlnRelativePath = "期末\"
+		VWDPort = "55167"
+		SlnRelativePath = "EndofTerm.Web\"
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EndofTerm.BLL", "EndofTerm.BLL\EndofTerm.BLL.csproj", "{DDA00EBC-3533-42F4-87F0-637963ECC131}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EndofTerm.DAL", "EndofTerm.DAL\EndofTerm.DAL.csproj", "{80A3DF72-6482-4109-8018-26F7B66AE83F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{FB8EA39B-0DF6-4C25-91CE-6C15B0FF4AEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FB8EA39B-0DF6-4C25-91CE-6C15B0FF4AEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C02A07FD-C1F7-42C4-A590-1C98E8AC772C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C02A07FD-C1F7-42C4-A590-1C98E8AC772C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C02A07FD-C1F7-42C4-A590-1C98E8AC772C}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{C02A07FD-C1F7-42C4-A590-1C98E8AC772C}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{DDA00EBC-3533-42F4-87F0-637963ECC131}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDA00EBC-3533-42F4-87F0-637963ECC131}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDA00EBC-3533-42F4-87F0-637963ECC131}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDA00EBC-3533-42F4-87F0-637963ECC131}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80A3DF72-6482-4109-8018-26F7B66AE83F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80A3DF72-6482-4109-8018-26F7B66AE83F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80A3DF72-6482-4109-8018-26F7B66AE83F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80A3DF72-6482-4109-8018-26F7B66AE83F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
