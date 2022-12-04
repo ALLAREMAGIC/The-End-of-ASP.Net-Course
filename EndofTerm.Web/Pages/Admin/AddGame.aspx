@@ -1,15 +1,17 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="AddGame.aspx.cs" Inherits="Pages_Admin_TypeController" %>
 
 <!DOCTYPE html>
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>用户登录状态和权限</title>
-    <link href="Styles/Style.css" rel="stylesheet" type="text/css" />
+    <title></title>
+    <link href="../../Styles/Style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <form id="form1" runat="server">
         <header class="header">
+            <img src="../../MyResources/LOGO/MW_Img.jpg" style="vertical-align: middle; height: 35px; width: 35px; float: left;" />
             <div class="status">
                 <asp:Label ID="lblWelcome" runat="server" Text="您还未登录！"></asp:Label>
                 &nbsp;&nbsp;&nbsp;
@@ -22,6 +24,9 @@
                 <asp:LinkButton ID="lnkbtnLogout" runat="server" ForeColor="White" Visible="false" OnClick="LnkbtnLogout_Click">退出登录</asp:LinkButton>
             </div>
         </header>
+        <div>
+            <asp:Table ID="AddGameTable" HorizontalAlign="Center" runat="server" Caption="游戏添加表" Font-Bold="False" ForeColor="#3366FF" Width="214px"></asp:Table>
+        </div>
     </form>
 </body>
 </html>
