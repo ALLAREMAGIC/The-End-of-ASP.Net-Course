@@ -28,17 +28,6 @@ namespace EndofTerm.BLL
       }
     }
     /// <summary>
-    /// 修改用户Id对应用户的密码
-    /// </summary>
-    /// <param name="customerId">用户Id</param>
-    /// <param name="password">新密码</param>
-    public void ChangePassword(int customerId, string password)
-    {
-      Customer customer = db.Customer.Find(customerId);
-      customer.Password = password;
-      db.SaveChanges();
-    }
-    /// <summary>
     /// 判断输入的用户名是否重名
     /// </summary>
     /// <param name="name">输入的用户名</param>
@@ -69,7 +58,11 @@ namespace EndofTerm.BLL
       customer.Password = password;
 
       db.Customer.Add(customer);
-      db.SaveChanges();
+        db.SaveChanges();
+        }
+        //    public bool IsAdmin()
+        //    {
+
+        //    }
     }
-  }
 }

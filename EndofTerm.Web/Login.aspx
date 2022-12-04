@@ -37,7 +37,6 @@
         </tr>
         <tr>
           <td><a href="NewUser.aspx">我要注册！</a></td>
-          <td class="tdcenter"><a href="GetPwd.aspx">忘记密码？</a></td>
         </tr>
         <tr>
           <td colspan="2" class="tdright">

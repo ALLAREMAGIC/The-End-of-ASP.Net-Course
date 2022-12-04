@@ -26,11 +26,11 @@ public partial class Login : System.Web.UI.Page
             if (customerId > 0)   //用户名和密码正确
             {
                 Session.Clear();   //清理Session中保存的内容        
-                if (txtName.Text.Trim() == "admin")  //管理员登录
+                if (txtName.Text.Trim() == "Admin")  //管理员登录
                 {
                     Session["AdminId"] = customerId;
                     Session["AdminName"] = txtName.Text;
-                    Response.Redirect("~/Admin/Default.aspx");
+                    Response.Redirect("~/Default.aspx");
                 }
                 else  //一般用户登录
                 {
@@ -38,6 +38,7 @@ public partial class Login : System.Web.UI.Page
                     Session["CustomerName"] = txtName.Text;
                     Response.Redirect("~/Default.aspx");
                 }
+                lblMsg.Text = "登录成功！";
             }
             else  //用户名或密码错误
             {

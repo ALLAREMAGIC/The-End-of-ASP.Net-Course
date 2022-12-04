@@ -1,11 +1,11 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Index.aspx.cs" Inherits="_Default" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>用户登录状态和权限</title>
-    <link href="~/Styles/Style.css" rel="stylesheet" type="text/css" />
+    <link href="../Styles/Style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <form id="form1" runat="server">
@@ -22,6 +22,13 @@
                 <asp:LinkButton ID="lnkbtnLogout" runat="server" ForeColor="White" Visible="false" OnClick="LnkbtnLogout_Click">退出登录</asp:LinkButton>
             </div>
         </header>
+        <div>
+            <div class="gamebox">
+                <span align="center">
+                    <img src="" style="vertical-align: middle; height: 66px; width: 66px; float: left;" />
+                    游戏1</span>
+            </div>
+        </div>
     </form>
 </body>
 </html>
