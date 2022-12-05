@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="AddGame.aspx.cs" Inherits="Pages_Admin_TypeController" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="ModifyGame.aspx.cs" Inherits="Pages_Admin_TypeController" %>
 
 <!DOCTYPE html>
 
@@ -27,14 +27,13 @@
             </div>
         </header>
         <div>
-            <h2>游戏添加页</h2>
+            <h2>游戏修改页</h2>
             <div class="addgamebox">
                 <div class="functionbtn">
                     游戏名称：
                     <asp:TextBox ID="tbGameName" runat="server" Width="300px"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="rfvGameName" runat="server" ControlToValidate="tbGameName" ErrorMessage="RequiredFieldValidator" ForeColor="#FF3300">不可为空</asp:RequiredFieldValidator>
                 </div>
-                <br />
                 <div class="functionbtn">
                     游戏类型：
                     <asp:DropDownList ID="ddlChooseType" runat="server" DataSourceID="SqlDataSourceType" DataTextField="TypeName" DataValueField="TypeId"></asp:DropDownList>

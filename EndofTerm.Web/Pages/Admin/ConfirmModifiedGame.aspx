@@ -1,10 +1,11 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="GamesIndex.aspx.cs" Inherits="_Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="ConfirmModifiedGame.aspx.cs" Inherits="Pages_Admin_ConfirmModifiedGame" %>
 
 <!DOCTYPE html>
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>首页</title>
+    <title></title>
     <link href="../../Styles/Style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -25,18 +26,16 @@
                 <asp:LinkButton ID="lnkbtnLogout" runat="server" ForeColor="White" Visible="false" OnClick="LnkbtnLogout_Click">退出登录</asp:LinkButton>
             </div>
         </header>
-        <div>
-            <br />
-            <br />
-            <span style="vertical-align: middle; font-size: 30px;">请选择游戏类别：</span>
-            <asp:DropDownList ID="DropDownList1" runat="server" Height="30px" Width="124px" Font-Bold="True" Font-Size="24px" Style="margin-top: 0px" DataSourceID="Games" DataTextField="TypeName" DataValueField="TypeId"></asp:DropDownList>
-            <asp:SqlDataSource ID="Games" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Type]"></asp:SqlDataSource>
-            <div class="gamebox">
-                <img src="../../MyResources/LOGO/MW_Img.jpg" class="gamelogo" />
-                <span class="gamespan-title">游戏标题</span>
+        <div class="addgamebox">
+            <div class="functionbtn">
+                游戏名称：
+                    <asp:DropDownList ID="ddlChooseGame" runat="server" DataSourceID="SqlDataSourceGame" DataTextField="Name" DataValueField="GameId" OnSelectedIndexChanged="ddlChooseGame_SelectedIndexChanged"></asp:DropDownList>
+                <asp:SqlDataSource ID="SqlDataSourceGame" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Games]"></asp:SqlDataSource>
+            </div>
+            <div class="functionbtn">
+                <asp:Button ID="Button1" runat="server" Text="确定修改该游戏" OnClick="Button1_Click" />
                 <br />
-                <br />
-                <span class="gamespan-intro">游戏简介</span>
+                <asp:Label ID="lblTip" runat="server" Text="Label"></asp:Label>
             </div>
         </div>
     </form>

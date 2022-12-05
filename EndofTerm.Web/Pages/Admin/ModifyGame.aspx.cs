@@ -12,6 +12,7 @@ public partial class Pages_Admin_TypeController : System.Web.UI.Page
 {
     private GamesService gamesService = new GamesService();
     private string imgUrl;
+    private int selectedGameId;
 
     protected void Page_Load(object sender, EventArgs e)
     {

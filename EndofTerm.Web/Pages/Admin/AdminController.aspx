@@ -15,6 +15,8 @@
             <div class="status">
                 <asp:Label ID="lblWelcome" runat="server" Text="您还未登录！"></asp:Label>
                 &nbsp;&nbsp;&nbsp;
+                <asp:LinkButton ID="lnkbtnPwd0" runat="server" ForeColor="White" Visible="false" PostBackUrl="~/Pages/Normal/GamesIndex.aspx">首页</asp:LinkButton>
+                &nbsp;&nbsp;&nbsp;
                 <asp:LinkButton ID="lnkbtnPwd" runat="server" ForeColor="White" Visible="false" PostBackUrl="~/ChangePwd.aspx">密码修改</asp:LinkButton>
                 &nbsp;&nbsp;&nbsp;
                 <asp:LinkButton ID="lnkbtnManage" runat="server" ForeColor="White" Visible="false" PostBackUrl="~/Pages/Admin/AdminController.aspx">系统管理</asp:LinkButton>
@@ -24,7 +26,7 @@
                 <asp:LinkButton ID="lnkbtnLogout" runat="server" ForeColor="White" Visible="false" OnClick="LnkbtnLogout_Click">退出登录</asp:LinkButton>
             </div>
         </header>
-        <h1>管理员功能</h1>
+        <h2>管理员功能</h2>
         <div class="addgamebox">
             <asp:LinkButton ID="lnkbtnToAddGame" runat="server" PostBackUrl="~/Pages/Admin/AddGame.aspx" Font-Size="Medium">单个游戏添加</asp:LinkButton>
             <br />
