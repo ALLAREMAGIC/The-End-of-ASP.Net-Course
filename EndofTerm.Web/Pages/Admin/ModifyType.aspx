@@ -33,7 +33,7 @@
                 </div>
                 <div class="functionbtn">
                     修改后类型名称：<asp:TextBox ID="tbTypeName" runat="server" Width="300px"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="rfvTypeName" runat="server" ErrorMessage="不能为空！" ForeColor="#FF3300"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="rfvTypeName" runat="server" ErrorMessage="不能为空！" ForeColor="#FF3300" ControlToValidate="tbTypeName"></asp:RequiredFieldValidator>
                 </div>
                 <br />
                 <div class="functionbtn">
