@@ -11,13 +11,12 @@ using System.Data.SqlClient;
 public partial class Pages_Admin_ModifyGame : System.Web.UI.Page
 {
     private GamesService gamesService = new GamesService();
-    private string imgUrl;
     private int selectedGameId;
 
     protected void Page_Load(object sender, EventArgs e)
     {
         CheckUser();
-        selectedGameId = int.Parse(Request.QueryString["gameid"]);
+        LoadGameByGameId();
     }
 
     protected void LnkbtnLogout_Click(object sender, EventArgs e)
@@ -63,14 +62,14 @@ public partial class Pages_Admin_ModifyGame : System.Web.UI.Page
 
         this.Image1.ImageUrl = this.Request.ApplicationPath + ("Images" + fuLogo.FileName);//把上传的图片赋给Image1路径
 
-        imgUrl = "~/Images/" + this.fuLogo.FileName;
+        Application["imgUrl"] = "~/Images/" + this.fuLogo.FileName;
     }
 
     protected void btnUploadAll_Click(object sender, EventArgs e)
     {
         if (rfvGameName.IsValid && rfvGamePrice.IsValid && rfvGameIntro.IsValid)//检验是否都不为空
         {
-            gamesService.UpdateGame(selectedGameId, int.Parse(ddlChooseType.SelectedValue), tbGameName.Text.Trim(), float.Parse(tbGamePrice.Text.Trim()), tbGameIntro.Text.Trim(), imgUrl, cbIsHot.Checked);
+            gamesService.UpdateGame(selectedGameId, int.Parse(ddlChooseType.SelectedValue), tbGameName.Text.Trim(), float.Parse(tbGamePrice.Text.Trim()), tbGameIntro.Text.Trim(), Application["imgUrl"].ToString(), cbIsHot.Checked);
             lblTip.Text = tbGameName.Text + "提交成功！";
             tbGameIntro.Text = "";
             tbGameName.Text = "";
@@ -79,6 +78,23 @@ public partial class Pages_Admin_ModifyGame : System.Web.UI.Page
         else
         {
             lblTip.Text = "提交失败\n所有内容不能为空！请检查后重新提交！";
+        }
+    }
+
+    private void LoadGameByGameId()
+    {
+        selectedGameId = int.Parse(Request.QueryString["gameid"]);
+        var theGame = gamesService.GetGameInfoByGameId(selectedGameId);
+        tbGameName.Text = theGame.Name;
+        tbGamePrice.Text = theGame.Price.ToString();
+        tbGameIntro.Text = theGame.Introduce;
+        cbIsHot.Checked = theGame.IsHot == 1 ? true : false;
+        ListItem item = ddlChooseType.Items.FindByText(gamesService.GetTypeInfoByTypeId(theGame.TypeId).TypeName);
+        if (item != null)
+        {
+            //防止出现多选的情况，将选中项 清除
+            ddlChooseType.ClearSelection();
+            item.Selected = true;
         }
     }
 

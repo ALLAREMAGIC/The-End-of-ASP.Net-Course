@@ -59,7 +59,7 @@ public partial class Pages_Admin_AddGame : System.Web.UI.Page
 
         this.Image1.ImageUrl = this.Request.ApplicationPath + ("Images" + fuLogo.FileName);//把上传的图片赋给Image1路径
 
-        Application["imgUrl"] = path + this.fuLogo.FileName;
+        Application["imgUrl"] = "~/Images/" + this.fuLogo.FileName;
     }
 
     protected void btnUploadAll_Click(object sender, EventArgs e)

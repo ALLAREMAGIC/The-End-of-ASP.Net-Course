@@ -10,7 +10,7 @@ public partial class Pages_Normal_GamesIndex : System.Web.UI.Page
     protected void LnkbtnLogout_Click(object sender, EventArgs e)
     {
         Session.Clear();
-        Response.Redirect("~/Pages/Normal/GameIndex.aspx");
+        Response.Redirect("~/Pages/Normal/GamesIndex.aspx");
     }
 
     protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)

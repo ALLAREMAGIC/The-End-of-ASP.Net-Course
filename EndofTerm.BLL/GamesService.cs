@@ -13,7 +13,7 @@ namespace EndofTerm.BLL
         /// </summary>
         /// <param name="searchText">指定的文本</param>
         /// <returns>满足条件的商品列表</returns>
-        public List<Games> GetProductBySearchText(string searchText)
+        public List<Games> GetGameBySearchText(string searchText)
         {
             return (db.Games.Where(p => p.Name.Contains(searchText))).ToList();
         }
@@ -35,14 +35,7 @@ namespace EndofTerm.BLL
             games.IsHot = isHot ? 1 : 0;
 
             db.Games.Add(games);
-            try
-            {
-                db.SaveChanges();
-            }
-            catch (System.Exception ex)
-            {
-                throw;
-            }
+            db.SaveChanges();
         }
 
         public void UpdateGame(int gameId, int typeId, string name, float price, string intro, string img, bool isHot)//插入游戏
@@ -77,14 +70,14 @@ namespace EndofTerm.BLL
             db.SaveChanges();
         }
 
-        public string GetTypeByTypeId(int typeId)//通过typeId查找类型
+        public Games GetGameInfoByGameId(int gameId)
         {
-            return (db.Type.Where(p => p.TypeId.Equals(typeId))).ToString();
+            return db.Games.Where(p => p.GameId.Equals(gameId)).FirstOrDefault();
         }
 
-        public string GetTypeByGameId(int gameId)//通过gameId查找类型
+        public Type GetTypeInfoByTypeId(int typeId)
         {
-            return (db.Games.Where(p => p.GameId.Equals(gameId))).ToString();
+            return db.Type.Where(p => p.TypeId.Equals(typeId)).FirstOrDefault();
         }
     }
 }

@@ -50,7 +50,7 @@
                 <br />
                 <div class="functionbtn">
                     游戏介绍：
-                    <asp:TextBox ID="tbGameIntro" runat="server" Height="77px" Width="300px"></asp:TextBox>
+                    <asp:TextBox ID="tbGameIntro" runat="server" Height="77px" Width="300px" TextMode="MultiLine" Wrap="False"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="rfvGameIntro" runat="server" ControlToValidate="tbGameIntro" ErrorMessage="rfvGameIntro" ForeColor="#FF3300">不可为空</asp:RequiredFieldValidator>
                     <br />
                 </div>

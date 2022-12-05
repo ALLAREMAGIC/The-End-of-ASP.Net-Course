@@ -10,7 +10,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <table style="border-collapse: collapse;">
+            <table>
                 <tr>
                     <td colspan="2">注册</td>
                 </tr>
