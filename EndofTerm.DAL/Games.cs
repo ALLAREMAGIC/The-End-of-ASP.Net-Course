@@ -20,7 +20,7 @@ namespace EndofTerm.DAL
         public double Price { get; set; }
         public string Introduce { get; set; }
         public string Image { get; set; }
-        public byte IsHot { get; set; }
+        public int IsHot { get; set; }
     
         public virtual Type Type { get; set; }
     }

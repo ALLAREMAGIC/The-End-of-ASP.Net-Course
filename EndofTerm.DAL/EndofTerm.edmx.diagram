@@ -5,9 +5,9 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="0af37e1c4ce04ad99ca7d140d9d3efa0" Name="Diagram1">
-        <EntityTypeShape EntityType="EndofTermModel.Customer" Width="1.5" PointX="0.75" PointY="0.75" />
-        <EntityTypeShape EntityType="EndofTermModel.Games" Width="1.5" PointX="2.75" PointY="0.75" />
-        <EntityTypeShape EntityType="EndofTermModel.Type" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="EndofTermModel.Customer" Width="1.5" PointX="0.75" PointY="4.75" />
+        <EntityTypeShape EntityType="EndofTermModel.Games" Width="1.5" PointX="3" PointY="1" />
+        <EntityTypeShape EntityType="EndofTermModel.Type" Width="1.5" PointX="0.75" PointY="1.375" />
         <AssociationConnector Association="EndofTermModel.FK_Games_Type" />
       </Diagram>
     </edmx:Diagrams>

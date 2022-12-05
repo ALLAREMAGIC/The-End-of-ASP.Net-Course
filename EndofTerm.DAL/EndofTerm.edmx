@@ -24,7 +24,7 @@
           <Property Name="Price" Type="float" Nullable="false" />
           <Property Name="Introduce" Type="ntext" Nullable="false" />
           <Property Name="Image" Type="ntext" Nullable="false" />
-          <Property Name="IsHot" Type="tinyint" Nullable="false" />
+          <Property Name="IsHot" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Type">
           <Key>
@@ -86,7 +86,7 @@
           <Property Name="Price" Type="Double" Nullable="false" />
           <Property Name="Introduce" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Image" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="IsHot" Type="Byte" Nullable="false" />
+          <Property Name="IsHot" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Type" Relationship="EndofTermModel.FK_Games_Type" FromRole="Games" ToRole="Type" />
         </EntityType>
         <EntityType Name="Type">

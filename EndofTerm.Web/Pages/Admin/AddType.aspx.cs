@@ -25,7 +25,7 @@ public partial class Pages_Admin_AddType : System.Web.UI.Page
         if (rfvTypeName.IsValid)
         {
             gamesService.InsertType(tbTypeName.Text);
-            lblTip.Text = "提交成功！";
+            lblTip.Text = tbTypeName.Text + "提交成功！";
             tbTypeName.Text = "";
         }
         else

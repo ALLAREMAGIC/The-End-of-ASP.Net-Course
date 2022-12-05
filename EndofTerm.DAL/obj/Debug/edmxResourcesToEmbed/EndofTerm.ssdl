@@ -19,7 +19,7 @@
     <Property Name="Price" Type="float" Nullable="false" />
     <Property Name="Introduce" Type="ntext" Nullable="false" />
     <Property Name="Image" Type="ntext" Nullable="false" />
-    <Property Name="IsHot" Type="tinyint" Nullable="false" />
+    <Property Name="IsHot" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Type">
     <Key>

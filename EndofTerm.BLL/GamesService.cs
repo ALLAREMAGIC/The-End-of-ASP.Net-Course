@@ -32,10 +32,17 @@ namespace EndofTerm.BLL
             games.Price = price;
             games.Introduce = intro;
             games.Image = img;
-            games.IsHot = isHot ? (byte)1 : (byte)0;
+            games.IsHot = isHot ? 1 : 0;
 
             db.Games.Add(games);
-            db.SaveChanges();
+            try
+            {
+                db.SaveChanges();
+            }
+            catch (System.Exception ex)
+            {
+                throw;
+            }
         }
 
         public void UpdateGame(int gameId, int typeId, string name, float price, string intro, string img, bool isHot)//插入游戏
@@ -46,7 +53,7 @@ namespace EndofTerm.BLL
             games.Price = price;
             games.Introduce = intro;
             games.Image = img;
-            games.IsHot = isHot ? (byte)1 : (byte)0;
+            games.IsHot = isHot ? 1 : 0;
 
             db.Games.Add(games);
             db.SaveChanges();
