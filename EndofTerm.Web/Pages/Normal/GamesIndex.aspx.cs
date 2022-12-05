@@ -14,7 +14,6 @@ public partial class Pages_Normal_GamesIndex : System.Web.UI.Page
             else if (Session["CustomerId"] != null)  //一般用户
             {
                 lblWelcome.Text = "您好, " + Session["CustomerName"].ToString();
-                lnkbtnPwd.Visible = true;
             }
             lnkbtnLogout.Visible = true;
         }
@@ -27,7 +26,7 @@ public partial class Pages_Normal_GamesIndex : System.Web.UI.Page
     protected void LnkbtnLogout_Click(object sender, EventArgs e)
     {
         Session.Clear();
-        Response.Redirect("~/Default.aspx");
+        Response.Redirect("~/Pages/Normal/GameIndex.aspx");
     }
 
     protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)

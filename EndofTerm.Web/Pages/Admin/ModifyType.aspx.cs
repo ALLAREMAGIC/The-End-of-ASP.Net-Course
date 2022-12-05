@@ -18,7 +18,7 @@ public partial class Pages_Admin_ModifyType : System.Web.UI.Page
     protected void LnkbtnLogout_Click(object sender, EventArgs e)
     {
         Session.Clear();
-        Response.Redirect("~/Default.aspx");
+        Response.Redirect("~/Pages/Normal/GamesIndex.aspx");
     }
 
     protected void btnUploadAll_Click(object sender, EventArgs e)

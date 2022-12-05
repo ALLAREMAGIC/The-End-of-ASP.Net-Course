@@ -14,7 +14,6 @@ public partial class _Default : System.Web.UI.Page
             else if (Session["CustomerId"] != null)  //一般用户
             {
                 lblWelcome.Text = "您好, " + Session["CustomerName"].ToString();
-                lnkbtnPwd.Visible = true;
             }
             lnkbtnLogout.Visible = true;
         }
@@ -27,6 +26,6 @@ public partial class _Default : System.Web.UI.Page
     protected void LnkbtnLogout_Click(object sender, EventArgs e)
     {
         Session.Clear();
-        Response.Redirect("~/Default.aspx");
+        Response.Redirect("~/Pages/Normal/GamesIndex.aspx");
     }
 }

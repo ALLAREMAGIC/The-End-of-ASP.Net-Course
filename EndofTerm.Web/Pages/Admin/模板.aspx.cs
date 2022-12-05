@@ -14,6 +14,6 @@ public partial class Pages_Admin_TypeController : System.Web.UI.Page
     protected void LnkbtnLogout_Click(object sender, EventArgs e)
     {
         Session.Clear();
-        Response.Redirect("~/Default.aspx");
+        Response.Redirect("~/Pages/Normal/GamesIndex.aspx");
     }
 }

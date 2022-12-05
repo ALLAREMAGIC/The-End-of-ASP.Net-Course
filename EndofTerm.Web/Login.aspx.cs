@@ -4,7 +4,8 @@ using System.Web.UI;
 
 public partial class Login : System.Web.UI.Page
 {
-    CustomerService customerSrv = new CustomerService();
+    private CustomerService customerSrv = new CustomerService();
+
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!IsPostBack)
@@ -17,6 +18,7 @@ public partial class Login : System.Web.UI.Page
             }
         }
     }
+
     protected void BtnLogin_Click(object sender, EventArgs e)
     {
         if (Page.IsValid)
@@ -25,18 +27,18 @@ public partial class Login : System.Web.UI.Page
             int customerId = customerSrv.CheckLogin(txtName.Text.Trim(), txtPwd.Text.Trim());
             if (customerId > 0)   //用户名和密码正确
             {
-                Session.Clear();   //清理Session中保存的内容        
+                Session.Clear();   //清理Session中保存的内容
                 if (txtName.Text.Trim() == "Admin")  //管理员登录
                 {
                     Session["AdminId"] = customerId;
                     Session["AdminName"] = txtName.Text;
-                    Response.Redirect("~/Default.aspx");
+                    Response.Redirect("~/Pages/Normal/GamesIndex.aspx");
                 }
                 else  //一般用户登录
                 {
                     Session["CustomerId"] = customerId;
                     Session["CustomerName"] = txtName.Text;
-                    Response.Redirect("~/Default.aspx");
+                    Response.Redirect("~/Pages/Normal/GamesIndex.aspx");
                 }
                 lblMsg.Text = "登录成功！";
             }
