@@ -30,11 +30,11 @@
             <asp:DropDownList ID="DropDownList1" runat="server" Height="30px" Width="124px" Font-Bold="True" Font-Size="24px" Style="margin-top: 0px" DataSourceID="Games" DataTextField="TypeName" DataValueField="TypeId" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged"></asp:DropDownList>
             <asp:SqlDataSource ID="Games" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Type]"></asp:SqlDataSource>
             <div class="gamebox">
-                <asp:Image ID="ImgGameLogo" runat="server" class="gamelogo" />
-                <asp:Label ID="lblGameName" runat="server" Text="游戏标题" class="gamespan-title"></asp:Label>
+                <asp:Image ID="ImgGameLogo1" runat="server" class="gamelogo" />
+                <asp:Label ID="lblGameName1" runat="server" Text="游戏标题" class="gamespan-title"></asp:Label>
                 <br />
                 <br />
-                <asp:Label ID="lblGameIntro" runat="server" Text="游戏简介" class="gamespan-intro"></asp:Label>
+                <asp:Label ID="lblGameIntro1" runat="server" Text="游戏简介" class="gamespan-intro"></asp:Label>
             </div>
         </div>
     </form>

@@ -13,6 +13,7 @@ public partial class Pages_Admin_AddGame : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
+        CheckUser();
     }
 
     protected void LnkbtnLogout_Click(object sender, EventArgs e)
@@ -74,6 +75,27 @@ public partial class Pages_Admin_AddGame : System.Web.UI.Page
         else
         {
             lblTip.Text = "提交失败\n所有内容不能为空！请检查后重新提交！";
+        }
+    }
+
+    private void CheckUser()
+    {
+        if (Session["AdminId"] != null || Session["CustomerId"] != null)  //用户已登录
+        {
+            if (Session["AdminId"] != null)  //管理员用户
+            {
+                lblWelcome.Text = "您好, " + Session["AdminName"].ToString();
+                lnkbtnManage.Visible = true;
+            }
+            else if (Session["CustomerId"] != null)  //一般用户
+            {
+                lblWelcome.Text = "您好, " + Session["CustomerName"].ToString();
+            }
+            lnkbtnLogout.Visible = true;
+        }
+        else
+        {
+            lnkbtnLogin.Visible = true;
         }
     }
 }
