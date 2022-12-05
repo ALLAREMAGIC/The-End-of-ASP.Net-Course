@@ -1,7 +1,14 @@
 ﻿using System;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.IO;
 
 public partial class Pages_Normal_GamesIndex : System.Web.UI.Page
 {
+    private int titlenum = 0;
+    private int intronum = 0;
+    private int imagenum = 0;
+
     protected void Page_Load(object sender, EventArgs e)
     {
         CheckUser();
