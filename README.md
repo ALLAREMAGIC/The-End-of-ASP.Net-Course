@@ -8,8 +8,8 @@
 
 github:
 
-https://github.com/ALLAREMAGIC/WangYuHui-s-HomeWork-Of-ASP.NET-Course
+https://github.com/ALLAREMAGIC/The-End-of-ASP.Net-Course
 
 gitee:
 
-https://gitee.com/AllAreMagic/WangYuHui-s-HomeWork-Of-ASP.NET-Course
+https://gitee.com/AllAreMagic/The-End-of-ASP.Net-Course
