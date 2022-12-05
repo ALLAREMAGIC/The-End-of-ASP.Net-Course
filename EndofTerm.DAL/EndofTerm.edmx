@@ -33,10 +33,26 @@
           <Property Name="TypeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="TypeName" Type="ntext" Nullable="false" />
         </EntityType>
+        <Association Name="FK_Games_Type">
+          <End Role="Type" Type="Self.Type" Multiplicity="1" />
+          <End Role="Games" Type="Self.Games" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Type">
+              <PropertyRef Name="TypeId" />
+            </Principal>
+            <Dependent Role="Games">
+              <PropertyRef Name="TypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="EndofTermModelStoreContainer">
           <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Games" EntityType="Self.Games" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Type" EntityType="Self.Type" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Games_Type" Association="Self.FK_Games_Type">
+            <End Role="Type" EntitySet="Type" />
+            <End Role="Games" EntitySet="Games" />
+          </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -46,6 +62,10 @@
           <EntitySet Name="Customer" EntityType="EndofTermModel.Customer" />
           <EntitySet Name="Games" EntityType="EndofTermModel.Games" />
           <EntitySet Name="Type" EntityType="EndofTermModel.Type" />
+          <AssociationSet Name="FK_Games_Type" Association="EndofTermModel.FK_Games_Type">
+            <End Role="Type" EntitySet="Type" />
+            <End Role="Games" EntitySet="Games" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="Customer">
           <Key>
@@ -67,6 +87,7 @@
           <Property Name="Introduce" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Image" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="IsHot" Type="Byte" Nullable="false" />
+          <NavigationProperty Name="Type" Relationship="EndofTermModel.FK_Games_Type" FromRole="Games" ToRole="Type" />
         </EntityType>
         <EntityType Name="Type">
           <Key>
@@ -74,7 +95,20 @@
           </Key>
           <Property Name="TypeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="TypeName" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Games" Relationship="EndofTermModel.FK_Games_Type" FromRole="Type" ToRole="Games" />
         </EntityType>
+        <Association Name="FK_Games_Type">
+          <End Type="EndofTermModel.Type" Role="Type" Multiplicity="1" />
+          <End Type="EndofTermModel.Games" Role="Games" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Type">
+              <PropertyRef Name="TypeId" />
+            </Principal>
+            <Dependent Role="Games">
+              <PropertyRef Name="TypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->

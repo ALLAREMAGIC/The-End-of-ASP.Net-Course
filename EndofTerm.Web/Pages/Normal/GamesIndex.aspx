@@ -10,13 +10,13 @@
 <body>
     <form id="form1" runat="server">
         <header class="header">
-            <img src="../../MyResources/LOGO/MW_Img.jpg" style="vertical-align: middle; height: 35px; width: 35px; float: left;" />
+            <img src="../../MyResources/LOGO/MW_Img.jpg" class="logo" />
             <div class="status">
                 <asp:Label ID="lblWelcome" runat="server" Text="您还未登录！"></asp:Label>
                 &nbsp;&nbsp;&nbsp;
                 <asp:LinkButton ID="lnkbtnPwd" runat="server" ForeColor="White" Visible="false" PostBackUrl="~/ChangePwd.aspx">密码修改</asp:LinkButton>
                 &nbsp;&nbsp;&nbsp;
-                <asp:LinkButton ID="lnkbtnManage" runat="server" ForeColor="White" Visible="false" PostBackUrl="~/Admin/Default.aspx">系统管理</asp:LinkButton>
+                <asp:LinkButton ID="lnkbtnManage" runat="server" ForeColor="White" Visible="false" PostBackUrl="~/Pages/Admin/AdminController.aspx">系统管理</asp:LinkButton>
                 &nbsp;&nbsp;&nbsp;
                 <asp:LinkButton ID="lnkbtnLogin" runat="server" ForeColor="White" Visible="false" PostBackUrl="~/Login.aspx">前往登录</asp:LinkButton>
                 &nbsp;&nbsp;&nbsp;

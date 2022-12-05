@@ -1,9 +1,9 @@
 ﻿using System;
+
 public partial class _Default : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        
         if (Session["AdminId"] != null || Session["CustomerId"] != null)  //用户已登录
         {
             if (Session["AdminId"] != null)  //管理员用户
@@ -23,9 +23,10 @@ public partial class _Default : System.Web.UI.Page
             lnkbtnLogin.Visible = true;
         }
     }
-  protected void LnkbtnLogout_Click(object sender, EventArgs e)
-  {
-    Session.Clear();
-    Response.Redirect("~/Default.aspx");
-  }
+
+    protected void LnkbtnLogout_Click(object sender, EventArgs e)
+    {
+        Session.Clear();
+        Response.Redirect("~/Default.aspx");
+    }
 }

@@ -66,8 +66,10 @@ form {
     border: dashed;
 }
 
-    .header logo {
-        width: 256px;
+    .header .logo {
+        vertical-align: middle;
+        height: 35px;
+        width: 35px;
         float: left;
     }
 
@@ -121,4 +123,20 @@ form {
         vertical-align: middle;
         height: 108px;
         width: 108px;
+    }
+
+.addgamebox {
+    text-align: left;
+    width: 500px;
+    border: 3px solid #fffeee;
+    padding: 30px;
+    margin: 30px auto;
+    display: flex;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+    .addgamebox .functionbtn {
+        vertical-align: top;
     }

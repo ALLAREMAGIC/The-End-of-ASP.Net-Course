@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace MyPetShop.BLL
+namespace EndofTerm.BLL
 {
     public class GamesService
     {
@@ -24,14 +24,37 @@ namespace MyPetShop.BLL
         /// <param name="name">用户名</param>
         /// <param name="password">密码</param>
         /// <param name="email">电子邮件地址</param>
-        public void Insert(string name, string password)
+        public void InsertGame(int typeId, string name, float price, string intro, string img, bool isHot)
         {
-            Customer customer = new Customer();
-            customer.Name = name;
-            customer.Password = password;
+            Games games = new Games();
+            games.TypeId = typeId;
+            games.Name = name;
+            games.Price = price;
+            games.Introduce = intro;
+            games.Image = img;
+            games.IsHot = isHot ? (byte)1 : (byte)0;
 
-            db.Customer.Add(customer);
+            db.Games.Add(games);
             db.SaveChanges();
+        }
+
+        public void InsertType(string typeName)
+        {
+            Type type = new Type();
+            type.TypeName = typeName;
+
+            db.Type.Add(type);
+            db.SaveChanges();
+        }
+
+        public string GetTypeByTypeId(int typeId)
+        {
+            return (db.Type.Where(p => p.TypeId.Equals(typeId))).ToString();
+        }
+
+        public string GetTypeByGameId(int gameId)
+        {
+            return (db.Games.Where(p => p.GameId.Equals(gameId))).ToString();
         }
     }
 }

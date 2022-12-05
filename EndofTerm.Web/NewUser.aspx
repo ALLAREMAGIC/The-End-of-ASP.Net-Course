@@ -9,13 +9,13 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div class="leftside">
+        <div>
             <table style="border-collapse: collapse;">
                 <tr>
-                    <td class="tdcenter" colspan="2">注册</td>
+                    <td colspan="2">注册</td>
                 </tr>
                 <tr>
-                    <td class="tdright">用户名:</td>
+                    <td>用户名:</td>
                     <td>
                         <asp:TextBox ID="txtName" runat="server"></asp:TextBox></td>
                     <td>
@@ -24,7 +24,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="tdright">密码:</td>
+                    <td>密码:</td>
                     <td>
                         <asp:TextBox ID="txtPwd" runat="server" TextMode="Password"></asp:TextBox></td>
                     <td>
@@ -33,7 +33,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="tdright">确认密码:</td>
+                    <td>确认密码:</td>
                     <td>
                         <asp:TextBox ID="txtPwdAgain" runat="server" TextMode="Password"></asp:TextBox></td>
                     <td>
@@ -42,13 +42,13 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="tdright" colspan="2">
+                    <td colspan="2">
                         <asp:CompareValidator ControlToValidate="txtPwdAgain" ControlToCompare="txtPwd" Display="Dynamic" ForeColor="Red" ID="cvPwd" runat="server" ErrorMessage="2次密码不一致">
                         </asp:CompareValidator>
                     </td>
                 </tr>
                 <tr>
-                    <td class="tdright" colspan="2">
+                    <td colspan="2">
                         <asp:Button ID="btnReg" runat="server" Text="立即注册" OnClick="BtnReg_Click" />
                     </td>
                 </tr>

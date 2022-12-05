@@ -21,5 +21,7 @@ namespace EndofTerm.DAL
         public string Introduce { get; set; }
         public string Image { get; set; }
         public byte IsHot { get; set; }
+    
+        public virtual Type Type { get; set; }
     }
 }

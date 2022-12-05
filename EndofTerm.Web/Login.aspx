@@ -9,13 +9,13 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div class="leftside">
-            <table style="border-collapse: collapse;">
+        <div>
+            <table>
                 <tr>
-                    <td class="tdcenter" colspan="2">登录</td>
+                    <td colspan="2">登录</td>
                 </tr>
                 <tr>
-                    <td class="tdright">用户名:</td>
+                    <td>用户名:</td>
                     <td>
                         <asp:TextBox ID="txtName" runat="server"></asp:TextBox></td>
                     <td>
@@ -23,7 +23,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="tdright">密码:</td>
+                    <td>密码:</td>
                     <td>
                         <asp:TextBox ID="txtPwd" runat="server" TextMode="Password"></asp:TextBox></td>
                     <td>
@@ -31,7 +31,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td colspan="2" class="tdright">
+                    <td colspan="2">
                         <asp:Button ID="btnLogin" runat="server" Text="立即登录" OnClick="BtnLogin_Click" />
                     </td>
                 </tr>
@@ -39,7 +39,7 @@
                     <td><a href="NewUser.aspx">我要注册！</a></td>
                 </tr>
                 <tr>
-                    <td colspan="2" class="tdright">
+                    <td colspan="2">
                         <asp:Label ID="lblMsg" runat="server" ForeColor="Red"></asp:Label>
                     </td>
                 </tr>

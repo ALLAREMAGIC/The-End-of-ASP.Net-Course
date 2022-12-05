@@ -14,7 +14,16 @@ namespace EndofTerm.DAL
     
     public partial class Type
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Type()
+        {
+            this.Games = new HashSet<Games>();
+        }
+    
         public int TypeId { get; set; }
         public string TypeName { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Games> Games { get; set; }
     }
 }

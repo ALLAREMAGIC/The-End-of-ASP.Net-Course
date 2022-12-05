@@ -8,6 +8,7 @@
         <EntityTypeShape EntityType="EndofTermModel.Customer" Width="1.5" PointX="0.75" PointY="0.75" />
         <EntityTypeShape EntityType="EndofTermModel.Games" Width="1.5" PointX="2.75" PointY="0.75" />
         <EntityTypeShape EntityType="EndofTermModel.Type" Width="1.5" PointX="4.75" PointY="0.75" />
+        <AssociationConnector Association="EndofTermModel.FK_Games_Type" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
