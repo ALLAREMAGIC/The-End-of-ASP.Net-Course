@@ -25,6 +25,12 @@ public partial class Pages_Admin_AddType : System.Web.UI.Page
         if (rfvTypeName.IsValid)
         {
             gamesService.InsertType(tbTypeName.Text);
+            lblTip.Text = "提交成功！";
+            tbTypeName.Text = "";
+        }
+        else
+        {
+            lblTip.Text = "提交失败\n所有内容不能为空！请检查后重新提交！";
         }
     }
 }

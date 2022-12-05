@@ -70,6 +70,10 @@ public partial class Pages_Admin_ModifyGame : System.Web.UI.Page
         if (rfvGameName.IsValid && rfvGamePrice.IsValid && rfvGameIntro.IsValid)//检验是否都不为空
         {
             gamesService.UpdateGame(selectedGameId, int.Parse(ddlChooseType.SelectedValue), tbGameName.Text.Trim(), float.Parse(tbGamePrice.Text.Trim()), tbGameIntro.Text.Trim(), imgUrl, cbIsHot.Checked);
+            lblTip.Text = "提交成功！";
+            tbGameIntro.Text = "";
+            tbGameName.Text = "";
+            tbGamePrice.Text = "";
         }
         else
         {
