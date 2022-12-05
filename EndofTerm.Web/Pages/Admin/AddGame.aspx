@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="AddGame.aspx.cs" Inherits="Pages_Admin_TypeController" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="AddGame.aspx.cs" Inherits="Pages_Admin_AddGame" %>
 
 <!DOCTYPE html>
 

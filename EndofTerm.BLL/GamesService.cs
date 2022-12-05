@@ -38,9 +38,32 @@ namespace EndofTerm.BLL
             db.SaveChanges();
         }
 
+        public void UpdateGame(int gameId, int typeId, string name, float price, string intro, string img, bool isHot)//插入游戏
+        {
+            Games games = db.Games.Find(gameId);
+            games.TypeId = typeId;
+            games.Name = name;
+            games.Price = price;
+            games.Introduce = intro;
+            games.Image = img;
+            games.IsHot = isHot ? (byte)1 : (byte)0;
+
+            db.Games.Add(games);
+            db.SaveChanges();
+        }
+
         public void InsertType(string typeName)//插入类型
         {
             Type type = new Type();
+            type.TypeName = typeName;
+
+            db.Type.Add(type);
+            db.SaveChanges();
+        }
+
+        public void UpdateType(int typeId, string typeName)//插入类型
+        {
+            Type type = db.Type.Find(typeId);
             type.TypeName = typeName;
 
             db.Type.Add(type);

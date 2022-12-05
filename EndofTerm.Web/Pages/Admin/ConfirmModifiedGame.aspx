@@ -26,10 +26,11 @@
                 <asp:LinkButton ID="lnkbtnLogout" runat="server" ForeColor="White" Visible="false" OnClick="LnkbtnLogout_Click">退出登录</asp:LinkButton>
             </div>
         </header>
+        <h2>选择一个游戏进行修改</h2>
         <div class="addgamebox">
             <div class="functionbtn">
                 游戏名称：
-                    <asp:DropDownList ID="ddlChooseGame" runat="server" DataSourceID="SqlDataSourceGame" DataTextField="Name" DataValueField="GameId" OnSelectedIndexChanged="ddlChooseGame_SelectedIndexChanged"></asp:DropDownList>
+                    <asp:DropDownList ID="ddlChooseGame" runat="server" DataSourceID="SqlDataSourceGame" DataTextField="Name" DataValueField="GameId"></asp:DropDownList>
                 <asp:SqlDataSource ID="SqlDataSourceGame" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Games]"></asp:SqlDataSource>
             </div>
             <div class="functionbtn">

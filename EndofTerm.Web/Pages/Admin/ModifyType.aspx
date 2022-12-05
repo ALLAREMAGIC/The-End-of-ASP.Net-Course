@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="AddType.aspx.cs" Inherits="Pages_Admin_AddType" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="ModifyType.aspx.cs" Inherits="Pages_Admin_ModifyType" %>
 
 <!DOCTYPE html>
 
@@ -27,11 +27,15 @@
             </div>
         </header>
         <div>
-            <h2>添加游戏类型</h2>
+            <h2>修改游戏类型</h2>
             <div class="addgamebox">
                 <div class="functionbtn">
-                    类型名称：<asp:TextBox ID="tbTypeName" runat="server" Width="300px"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="rfvTypeName" runat="server" ErrorMessage="不能为空！" ForeColor="#FF3300" ControlToValidate="tbTypeName"></asp:RequiredFieldValidator>
+                    所选类型名称：<asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSourceType" DataTextField="TypeName" DataValueField="TypeId" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged"></asp:DropDownList>
+                    <asp:SqlDataSource ID="SqlDataSourceType" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Type]"></asp:SqlDataSource>
+                </div>
+                <div class="functionbtn">
+                    修改后类型名称：<asp:TextBox ID="tbTypeName" runat="server" Width="300px"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="rfvTypeName" runat="server" ErrorMessage="不能为空！" ForeColor="#FF3300"></asp:RequiredFieldValidator>
                 </div>
                 <br />
                 <div class="functionbtn">

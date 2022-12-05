@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="GamesIndex.aspx.cs" Inherits="_Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="GamesIndex.aspx.cs" Inherits="Pages_Normal_GamesIndex" %>
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -29,14 +29,14 @@
             <br />
             <br />
             <span style="vertical-align: middle; font-size: 30px;">请选择游戏类别：</span>
-            <asp:DropDownList ID="DropDownList1" runat="server" Height="30px" Width="124px" Font-Bold="True" Font-Size="24px" Style="margin-top: 0px" DataSourceID="Games" DataTextField="TypeName" DataValueField="TypeId"></asp:DropDownList>
+            <asp:DropDownList ID="DropDownList1" runat="server" Height="30px" Width="124px" Font-Bold="True" Font-Size="24px" Style="margin-top: 0px" DataSourceID="Games" DataTextField="TypeName" DataValueField="TypeId" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged"></asp:DropDownList>
             <asp:SqlDataSource ID="Games" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Type]"></asp:SqlDataSource>
             <div class="gamebox">
-                <img src="../../MyResources/LOGO/MW_Img.jpg" class="gamelogo" />
-                <span class="gamespan-title">游戏标题</span>
+                <asp:Image ID="ImgGameLogo" runat="server" class="gamelogo" />
+                <asp:Label ID="lblGameName" runat="server" Text="游戏标题" class="gamespan-title"></asp:Label>
                 <br />
                 <br />
-                <span class="gamespan-intro">游戏简介</span>
+                <asp:Label ID="lblGameIntro" runat="server" Text="游戏简介" class="gamespan-intro"></asp:Label>
             </div>
         </div>
     </form>

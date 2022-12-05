@@ -8,7 +8,7 @@ using EndofTerm.BLL;
 using System.Data;
 using System.Data.SqlClient;
 
-public partial class Pages_Admin_TypeController : System.Web.UI.Page
+public partial class Pages_Admin_ModifyGame : System.Web.UI.Page
 {
     private GamesService gamesService = new GamesService();
     private string imgUrl;
@@ -16,12 +16,13 @@ public partial class Pages_Admin_TypeController : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
+        selectedGameId = int.Parse(Request.QueryString["gameid"]);
     }
 
     protected void LnkbtnLogout_Click(object sender, EventArgs e)
     {
         Session.Clear();
-        Response.Redirect("~/Default.aspx");
+        Response.Redirect("../Normal/GameIndex.aspx");
     }
 
     protected void btnUploadImg_Click(object sender, EventArgs e)
@@ -68,7 +69,7 @@ public partial class Pages_Admin_TypeController : System.Web.UI.Page
     {
         if (rfvGameName.IsValid && rfvGamePrice.IsValid && rfvGameIntro.IsValid)//检验是否都不为空
         {
-            gamesService.InsertGame(int.Parse(ddlChooseType.SelectedValue), tbGameName.Text.Trim(), float.Parse(tbGamePrice.Text.Trim()), tbGameIntro.Text.Trim(), imgUrl, cbIsHot.Checked);
+            gamesService.UpdateGame(selectedGameId, int.Parse(ddlChooseType.SelectedValue), tbGameName.Text.Trim(), float.Parse(tbGamePrice.Text.Trim()), tbGameIntro.Text.Trim(), imgUrl, cbIsHot.Checked);
         }
         else
         {

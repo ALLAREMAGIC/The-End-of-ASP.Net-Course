@@ -6,9 +6,10 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using EndofTerm.BLL;
 
-public partial class Pages_Admin_AddType : System.Web.UI.Page
+public partial class Pages_Admin_ModifyType : System.Web.UI.Page
 {
     private GamesService gamesService = new GamesService();
+    private int selectedTypeId;
 
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -24,7 +25,12 @@ public partial class Pages_Admin_AddType : System.Web.UI.Page
     {
         if (rfvTypeName.IsValid)
         {
-            gamesService.InsertType(tbTypeName.Text);
+            gamesService.UpdateType(selectedTypeId, tbTypeName.Text);
         }
+    }
+
+    protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        selectedTypeId = int.Parse(DropDownList1.SelectedValue);
     }
 }

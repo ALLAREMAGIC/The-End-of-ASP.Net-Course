@@ -8,7 +8,7 @@ using EndofTerm.BLL;
 using System.Data;
 using System.Data.SqlClient;
 
-public partial class Pages_Admin_TypeController : System.Web.UI.Page
+public partial class Pages_Admin_AddGame : System.Web.UI.Page
 {
     private GamesService gamesService = new GamesService();
     private string imgUrl;

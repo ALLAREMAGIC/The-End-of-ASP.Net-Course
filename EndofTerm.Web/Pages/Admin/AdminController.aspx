@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="AdminController.aspx.cs" Inherits="Pages_Admin_TypeController" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="AdminController.aspx.cs" Inherits="Pages_Admin_AdminController" %>
 
 <!DOCTYPE html>
 
@@ -28,16 +28,18 @@
         </header>
         <h2>管理员功能</h2>
         <div class="addgamebox">
-            <asp:LinkButton ID="lnkbtnToAddGame" runat="server" PostBackUrl="~/Pages/Admin/AddGame.aspx" Font-Size="Medium">单个游戏添加</asp:LinkButton>
-            <br />
-            <br />
-            <asp:LinkButton ID="lnkbtnToAddType" runat="server" PostBackUrl="~/Pages/Admin/AddGame.aspx" Font-Size="Medium">游戏类别添加</asp:LinkButton>
-            <br />
-            <br />
-            <asp:LinkButton ID="lnkbtnToModifyGame" runat="server" PostBackUrl="~/Pages/Admin/AddGame.aspx" Font-Size="Medium">单个游戏内容修改</asp:LinkButton>
-            <br />
-            <br />
-            <asp:LinkButton ID="lnkbtnToModifyType" runat="server" PostBackUrl="~/Pages/Admin/AddGame.aspx" Font-Size="Medium">游戏类别修改</asp:LinkButton>
+            <div>
+                <asp:LinkButton ID="lnkbtnToAddGame" runat="server" PostBackUrl="~/Pages/Admin/AddGame.aspx" Font-Size="20px">单个游戏添加</asp:LinkButton>
+                <br />
+                <br />
+                <asp:LinkButton ID="lnkbtnToAddType" runat="server" PostBackUrl="~/Pages/Admin/AddType.aspx" Font-Size="20px">游戏类别添加</asp:LinkButton>
+                <br />
+                <br />
+                <asp:LinkButton ID="lnkbtnToModifyGame" runat="server" PostBackUrl="~/Pages/Admin/ConfirmModifiedGame.aspx" Font-Size="20px">单个游戏内容修改</asp:LinkButton>
+                <br />
+                <br />
+                <asp:LinkButton ID="lnkbtnToModifyType" runat="server" PostBackUrl="~/Pages/Admin/ModifyType.aspx" Font-Size="20px">游戏类别修改</asp:LinkButton>
+            </div>
         </div>
     </form>
 </body>
