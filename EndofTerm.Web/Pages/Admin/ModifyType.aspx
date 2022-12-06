@@ -28,16 +28,22 @@
             <h2>修改类型</h2>
             <div class="addgamebox">
                 <div class="functionbtn">
-                    所选类型名称：<asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSourceType" DataTextField="TypeName" DataValueField="TypeId" AutoPostBack="True" EnableTheming="True"></asp:DropDownList>
+                    所选类型名称：
+                <br />
+                    <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSourceType" DataTextField="TypeName" DataValueField="TypeId" AutoPostBack="True" EnableTheming="True" CssClass="ddlcss"></asp:DropDownList>
                     <asp:SqlDataSource ID="SqlDataSourceType" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Type]"></asp:SqlDataSource>
+                    <br />
                 </div>
                 <div class="functionbtn">
-                    修改后类型名称：<asp:TextBox ID="tbTypeName" runat="server" Width="300px"></asp:TextBox>
+                    修改后类型名称：
+                <br />
+                    <asp:TextBox ID="tbTypeName" runat="server" CssClass="inputcss"></asp:TextBox>
+                    <br />
                     <asp:RequiredFieldValidator ID="rfvTypeName" runat="server" ErrorMessage="不能为空！" ForeColor="#FF3300" ControlToValidate="tbTypeName"></asp:RequiredFieldValidator>
                 </div>
                 <br />
                 <div class="functionbtn">
-                    <asp:Button ID="btnUploadNewType" runat="server" Text="点击上传" Height="33px" Width="118px" OnClick="btnUploadAll_Click" />
+                    <asp:Button ID="btnUploadNewType" runat="server" Text="点击上传" Height="41px" Width="118px" OnClick="btnUploadAll_Click" CssClass="niceButton2" />
                     <br />
                     <asp:Label ID="lblTip" runat="server" Font-Size="Medium"></asp:Label>
                 </div>

@@ -27,16 +27,27 @@
         <h2>管理员功能菜单</h2>
         <div class="addgamebox">
             <div class="headerbox">
-                <asp:LinkButton ID="lnkbtnToAddGame" runat="server" PostBackUrl="~/Pages/Admin/AddGame.aspx" Font-Size="20px">添加游戏</asp:LinkButton>
-                <br />
-                <br />
-                <asp:LinkButton ID="lnkbtnToModifyGame" runat="server" PostBackUrl="~/Pages/Admin/ConfirmModifiedGame.aspx" Font-Size="20px">修改游戏数据</asp:LinkButton>
-                <br />
-                <br />
-                <asp:LinkButton ID="lnkbtnToAddType" runat="server" PostBackUrl="~/Pages/Admin/AddType.aspx" Font-Size="20px">添加种类</asp:LinkButton>
-                <br />
-                <br />
-                <asp:LinkButton ID="lnkbtnToModifyType" runat="server" PostBackUrl="~/Pages/Admin/ModifyType.aspx" Font-Size="20px">修改种类</asp:LinkButton>
+                <div>
+                    <asp:LinkButton ID="lnkbtnToAddGame" runat="server" PostBackUrl="~/Pages/Admin/AddGame.aspx" Font-Size="20px" CssClass="niceButton2">添加游戏</asp:LinkButton>
+                    <br />
+                    <br />
+                </div>
+                <div>
+                    <br />
+                    <asp:LinkButton ID="lnkbtnToModifyGame" runat="server" PostBackUrl="~/Pages/Admin/ConfirmModifiedGame.aspx" Font-Size="20px" CssClass="niceButton2">修改游戏数据</asp:LinkButton>
+                    <br />
+                    <br />
+                </div>
+                <div>
+                    <br />
+                    <asp:LinkButton ID="lnkbtnToAddType" runat="server" PostBackUrl="~/Pages/Admin/AddType.aspx" Font-Size="20px" CssClass="niceButton2">添加种类</asp:LinkButton>
+                    <br />
+                    <br />
+                </div>
+                <div>
+                    <br />
+                    <asp:LinkButton ID="lnkbtnToModifyType" runat="server" PostBackUrl="~/Pages/Admin/ModifyType.aspx" Font-Size="20px" CssClass="niceButton2">修改种类</asp:LinkButton>
+                </div>
             </div>
         </div>
     </form>

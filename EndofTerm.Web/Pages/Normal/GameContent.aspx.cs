@@ -46,7 +46,7 @@ public partial class Pages_Normal_GamesContent : System.Web.UI.Page
         int selectedGameId = int.Parse(Request.QueryString["gameid"]);
         var theGame = gamesService.GetGameInfoByGameId(selectedGameId);
         lblGameName.Text = theGame.Name;
-        lblGamePirce.Text = "￥" + theGame.Price.ToString();
+        lblGamePirce.Text = "价格：￥" + theGame.Price.ToString();
         lblGameIntro.Text = theGame.Introduce;
         ImgGameLogo.ImageUrl = "~/Images/" + theGame.Image;
     }

@@ -28,11 +28,13 @@
         <div class="addgamebox">
             <div class="functionbtn">
                 游戏名称：
-                    <asp:DropDownList ID="ddlChooseGame" runat="server" DataSourceID="SqlDataSourceGame" DataTextField="Name" DataValueField="GameId"></asp:DropDownList>
+                <br />
+                <asp:DropDownList ID="ddlChooseGame" runat="server" DataSourceID="SqlDataSourceGame" DataTextField="Name" DataValueField="GameId" CssClass="ddlcss"></asp:DropDownList>
                 <asp:SqlDataSource ID="SqlDataSourceGame" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Games]"></asp:SqlDataSource>
+                <br />
             </div>
             <div class="functionbtn">
-                <asp:Button ID="Button1" runat="server" Text="确定修改该游戏" OnClick="Button1_Click" />
+                <asp:Button ID="Button1" runat="server" Text="确定修改该游戏" OnClick="Button1_Click" CssClass="niceButton2" />
                 <br />
                 <asp:Label ID="lblTip" runat="server"></asp:Label>
             </div>

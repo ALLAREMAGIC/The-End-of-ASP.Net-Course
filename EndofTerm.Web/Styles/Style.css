@@ -2,42 +2,35 @@
 http://magicwang.club/
 */
 a:active {
-    color: #333366;
     text-decoration: none;
 }
 
 a:hover {
-    color: #ff0000;
     text-decoration: underline;
 }
 
 a:link {
-    color: #333366;
     text-decoration: none;
 }
 
 a.navlink:hover {
-    color: #ffffff;
     text-decoration: underline;
 }
 
 a.navlink:link {
-    color: #ffffff;
     text-decoration: none;
 }
 
 a.navlink:visited {
-    color: #ffffff;
     text-decoration: none;
 }
 
 a:visited {
-    color: #333366;
     text-decoration: none;
 }
 
 body {
-    font-size: 12px;
+    font-size: 15px;
     margin: 0px;
     background-color: #fffeee;
     text-align: center;
@@ -46,9 +39,9 @@ body {
 
 form {
     margin-top: 3px;
-    font-size: 12px;
+    font-size: 15px;
     margin-bottom: 0;
-    font-family: "Tahoma", "MS Shell Dlg";
+    font-family: Consolas,'.PingFang SC';
 }
 
 .footer {
@@ -63,8 +56,8 @@ form {
 .header {
     border-color: inherit;
     border-width: medium;
-    width: 778px;
-    height: 47px;
+    width: 760px;
+    height: 40px;
     margin: 0 auto;
     padding: 4px 2px 2px 10px;
     text-align: left;
@@ -103,6 +96,34 @@ form {
         background-color: #8c8ea3;
     }
 
+.headerbox {
+    border-style: solid;
+    border-color: inherit;
+    border-width: 5px;
+    width: 431px;
+    float: right;
+    margin: auto;
+    padding: 6px;
+    position: relative;
+    overflow: hidden;
+    border-image: linear-gradient(45deg, gold, deeppink) 1;
+    clip-path: inset(0px round 5px);
+    animation: headerboxAni 3s infinite linear;
+    filter: hue-rotate(360deg);
+    top: 0px;
+    left: -2px;
+}
+
+@keyframes headerboxAni {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+
+    100% {
+        filter: hue-rorate(360deg);
+    }
+}
+
 .gamebox {
     text-align: center;
     display: flex;
@@ -112,7 +133,8 @@ form {
     border-radius: 20px;
     padding: 30px;
     margin: 30px auto;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 25px 50px -10px, rgba(0, 0, 0, 0.3) 0px 15px 30px -15px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 10px 20px -4px, rgba(0, 0, 0, 0.3) 0px 6px 12px -6px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    animation: fadeout 1s 1;
 }
 
     .gamebox .gamespan-title {
@@ -141,102 +163,68 @@ form {
         color: rgb(88 88 88 / 0.75);
     }
 
-.addgamebox {
-    text-align: left;
-    width: 500px;
-    border: 3px solid #fffeee;
-    padding: 30px;
-    margin: 30px auto;
-    display: flex;
-    height: 59%;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-    .addgamebox .functionbtn {
-        vertical-align: top;
-        margin: auto;
-    }
-
-.headerbox {
-    border-style: solid;
-    border-color: inherit;
-    border-width: 5px;
-    width: 312px;
-    float: right;
-    margin: auto;
-    padding: 6px;
-    position: relative;
-    overflow: hidden;
-    border-image: linear-gradient(45deg, gold, deeppink) 1;
-    clip-path: inset(0px round 5px);
-    animation: headerboxAni 3s infinite linear;
-    filter: hue-rotate(360deg);
-    top: 0px;
-    left: 0px;
-}
-
-@keyframes headerboxAni {
+@keyframes fadeout {
     0% {
-        filter: hue-rotate(0deg);
+        opacity: 0;
     }
 
     100% {
-        filter: hue-rorate(360deg);
+        opacity: 1;
     }
 }
+
+.addgamebox {
+    vertical-align: middle;
+    text-align: center;
+    width: 384px;
+    border: 3px solid #fffeee;
+    margin: auto;
+    height: 521px;
+    animation: fadeout 1s 1;
+}
+
+    .addgamebox .functionbtn {
+        text-align: center;
+        vertical-align: top;
+        margin: auto;
+        width: 380px;
+    }
 
 .niceButton2 {
-    border-radius: 20px;
-    border-style: none;
-    border-color: inherit;
-    border-width: medium;
-    position: relative;
-    background-color: rgb(32, 93, 224);
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: #0083ff;
+    border: 1px solid;
+    background-color: transparent;
+    text-transform: uppercase;
     font-size: 14px;
-    color: #ffffff;
-    padding: 5px;
-    width: 73px;
-    text-align: center;
-    transition-duration: 0.6s;
-    text-decoration: none;
-    overflow: hidden;
-    cursor: pointer;
-    top: 2px;
-    left: 2px;
-    height: 32px;
+    padding: 10px 20px;
+    font-weight: 300;
+    color: black;
 }
 
-    .niceButton2::after {
-        content: '';
-        background: #53a4f0;
-        display: block;
-        position: absolute;
-        padding-top: 300%;
-        padding-left: 350%;
-        margin-left: -20px !important;
-        margin-top: -120%;
-        opacity: 0;
-        transition: all 0.8s;
-    }
-
-    .niceButton2:active::after {
-        padding: 0;
-        margin: 0;
-        opacity: 1;
-        transition: 0s;
+    .niceButton2:hover {
+        color: white;
+        border: 0;
+        background-color: #f038ff;
+        -webkit-box-shadow: 10px 10px 99px 6px rgba(240, 56, 255, 1);
+        -moz-box-shadow: 10px 10px 99px 6px rgba(240, 56, 255, 1);
+        box-shadow: 10px 10px 99px 6px rgba(240, 56, 255, 1);
     }
 
 .gamecontentbox {
     text-align: center;
     display: grid;
     width: 1200px;
-    height: 600px;
+    height: 180px;
     border: 3px solid gold;
     border-radius: 20px;
     padding: 30px;
     margin: 30px auto;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 25px 50px -10px, rgba(0, 0, 0, 0.3) 0px 15px 30px -15px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    animation: fadeout 1s 1;
 }
 
     .gamecontentbox .gamespan-title {
@@ -266,4 +254,31 @@ form {
         border: 2px solid rgb(0 148 8 / 0.29);
         border-radius: 12px;
         box-shadow: rgba(50, 50, 93, 0.25) 0px 5px 10px -2px inset, rgba(0, 0, 0, 0.3) 0px 3px 6px -3px inset;
+    }
+
+.ddlcss {
+    border-right: #0099cc 1px groove;
+    border-top: 1px solid #0099cc;
+    border-left: 1px solid #0099cc;
+    border-bottom: 1px inset #0099cc;
+    background-color: aliceblue;
+    box-shadow: blue 0px 0px 0px 2px inset, rgb(255, 255, 255) 2px -2px 0px -1px, rgb(31, 193, 27) 2px -2px, rgb(255, 255, 255) 4px -4px 0px -3px, rgb(255, 217, 19) 4px -4px, rgb(255, 255, 255) 5px -5px 0px -1px, rgb(255, 156, 85) 5px -5px, rgb(255, 255, 255) 6px -6px 0px -4px, rgb(255, 85, 85) 6px -6px;
+}
+
+.inputcss {
+    width: 100%;
+    outline-style: none;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 4px 5px;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: "Microsoft soft";
+}
+
+    .inputcss:focus {
+        border-color: #66afe9;
+        outline: 0;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)
     }

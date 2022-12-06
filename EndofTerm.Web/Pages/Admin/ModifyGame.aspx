@@ -29,28 +29,36 @@
             <div class="addgamebox">
                 <div class="functionbtn">
                     游戏名称：
-                    <asp:TextBox ID="tbGameName" runat="server" Width="300px"></asp:TextBox>
+                <br />
+                    <asp:TextBox ID="tbGameName" runat="server" CssClass="inputcss"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="rfvGameName" runat="server" ControlToValidate="tbGameName" ErrorMessage="RequiredFieldValidator" ForeColor="#FF3300">不可为空</asp:RequiredFieldValidator>
                 </div>
+                <br />
                 <div class="functionbtn">
                     游戏类型：
-                    <asp:DropDownList ID="ddlChooseType" runat="server" DataSourceID="SqlDataSourceType" DataTextField="TypeName" DataValueField="TypeId"></asp:DropDownList>
+                <br />
+                    <asp:DropDownList ID="ddlChooseType" runat="server" DataSourceID="SqlDataSourceType" DataTextField="TypeName" DataValueField="TypeId" CssClass="ddlcss"></asp:DropDownList>
+                    <br />
                     <asp:SqlDataSource ID="SqlDataSourceType" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Type]"></asp:SqlDataSource>
                 </div>
                 <br />
                 <div class="functionbtn">
-                    游戏是否热门：<asp:CheckBox ID="cbIsHot" runat="server" />
+                    游戏是否热门：
+                <br />
+                    <asp:CheckBox ID="cbIsHot" runat="server" CssClass="inputcss" />
                 </div>
                 <br />
                 <div class="functionbtn">
                     游戏价格：
-                    <asp:TextBox ID="tbGamePrice" runat="server" Width="300px"></asp:TextBox>
+                <br />
+                    <asp:TextBox ID="tbGamePrice" runat="server" CssClass="inputcss"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="rfvGamePrice" runat="server" ControlToValidate="tbGamePrice" ErrorMessage="RequiredFieldValidator" ForeColor="#FF3300">不可为空</asp:RequiredFieldValidator>
                 </div>
                 <br />
                 <div class="functionbtn">
                     游戏介绍：
-                    <asp:TextBox ID="tbGameIntro" runat="server" Height="77px" Width="300px" TextMode="MultiLine" Wrap="False"></asp:TextBox>
+                <br />
+                    <asp:TextBox ID="tbGameIntro" runat="server" Height="77px" TextMode="MultiLine" Wrap="False" CssClass="inputcss"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="rfvGameIntro" runat="server" ControlToValidate="tbGameIntro" ErrorMessage="rfvGameIntro" ForeColor="#FF3300">不可为空</asp:RequiredFieldValidator>
                     <br />
                 </div>
@@ -62,21 +70,25 @@
                     </div>
 
                     <div>
-                        <asp:FileUpload ID="fuLogo" runat="server" Width="300px" />
+                        <asp:FileUpload ID="fuLogo" runat="server" Width="300px" CssClass="inputcss" />
                         <br />
-                        <asp:Label ID="lblImgTip" runat="server" ForeColor="#FF3300" Font-Size="Small"></asp:Label>
-                        <asp:Button ID="btnUploadImg" runat="server" Text="上传" OnClick="btnUploadImg_Click" />
+                        <br />
+                        <br />
                     </div>
+                    <asp:Button ID="btnUploadImg" runat="server" Text="上传" OnClick="btnUploadImg_Click" CssClass="niceButton2" Height="39px" />
+                    <br />
+                    <asp:Label ID="lblImgTip" runat="server" ForeColor="#FF3300" Font-Size="Small"></asp:Label>
                 </div>
                 <br />
-                <br />
-                <br />
+                <div class="functionbtn">
+                    <asp:Button ID="btnUploadAll" runat="server" Text="点击上传全部" Height="39px" Width="135px" OnClick="btnUploadAll_Click" CssClass="niceButton2" />
+                    <br />
+                    <asp:Label ID="lblTip" runat="server" Font-Size="Medium"></asp:Label>
+                </div>
             </div>
-            <div class="functionbtn">
-                <asp:Button ID="btnUploadAll" runat="server" Text="点击上传全部" Height="33px" Width="118px" OnClick="btnUploadAll_Click" />
-                <br />
-                <asp:Label ID="lblTip" runat="server" Font-Size="Medium"></asp:Label>
-            </div>
+            <br />
+            <br />
+            <br />
         </div>
     </form>
 </body>
