@@ -27,7 +27,7 @@
             <br />
             <br />
             <span style="vertical-align: middle; font-size: 30px;">请选择游戏类别：</span>
-            <asp:DropDownList ID="ddlGametype" runat="server" Height="30px" Width="124px" Font-Bold="True" Font-Size="24px" Style="margin-top: 0px" DataSourceID="Type" DataTextField="TypeName" DataValueField="TypeId" OnSelectedIndexChanged="ddlGametype_SelectedIndexChanged"></asp:DropDownList>
+            <asp:DropDownList ID="ddlGametype" runat="server" Height="30px" Width="124px" Font-Bold="True" Font-Size="24px" Style="margin-top: 0px" DataSourceID="Type" DataTextField="TypeName" DataValueField="TypeId" OnSelectedIndexChanged="ddlGametype_SelectedIndexChanged" AutoPostBack="True"></asp:DropDownList>
             <!--<div class="gamebox">
                 <asp:Image ID="ImgGameLogo1" runat="server" class="gamelogo" ImageUrl="~/Images/真人快打.png" />
                 <asp:Label ID="lblGameName1" runat="server" Text="游戏标题" class="gamespan-title"></asp:Label>

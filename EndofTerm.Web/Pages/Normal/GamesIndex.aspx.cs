@@ -14,7 +14,6 @@ public partial class Pages_Normal_GamesIndex : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         CheckUser();
-        CreateGameBox();
     }
 
     protected void LnkbtnLogout_Click(object sender, EventArgs e)
@@ -51,7 +50,7 @@ public partial class Pages_Normal_GamesIndex : System.Web.UI.Page
             var gameList = gamesService.GetGamesInfoByTypeId(int.Parse(ddlGametype.SelectedValue));//获取游戏信息
             for (int i = 0; i < gameList.Count; i++)//动态生成gamebox
             {
-                Panel pnl = new Panel() { ID = "div" + i, CssClass = "gamebox" }; //div
+                Panel pnl = new Panel() { ID = "div" + i.ToString(), CssClass = "gamebox" }; //div
 
                 //创建游戏logo的image控件
                 Image imgGameLogo = new Image() { ID = "ImgGameLogo" + i, CssClass = "gamelogo", ImageUrl = Server.MapPath(gameList[i].Image) };
@@ -59,6 +58,8 @@ public partial class Pages_Normal_GamesIndex : System.Web.UI.Page
                 //创建游戏标题label控件
                 Label lblGameTitle = new Label() { ID = "lblText" + i, CssClass = "gamespan-title", Text = gameList[i].Name }; //span
                 pnl.Controls.Add(lblGameTitle);
+                //换行
+                pnl.Controls.Add(new Literal() { Text = "<br />" });
                 //创建游戏介绍label控件
                 Label lblGameIntro = new Label() { ID = "lblButton" + i, CssClass = "gamespan-intro", Text = gameList[i].Introduce };
                 pnl.Controls.Add(lblGameIntro);
