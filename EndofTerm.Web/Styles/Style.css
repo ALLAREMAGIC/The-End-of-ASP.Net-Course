@@ -1,3 +1,6 @@
+/*神奇望制作：
+http://magicwang.club/
+*/
 a:active {
     color: #333366;
     text-decoration: none;
@@ -101,7 +104,7 @@ form {
 
 .gamebox {
     text-align: center;
-    width: 958px;
+    width: 1200px;
     border: 3px solid black;
     padding: 30px;
     margin: 30px auto;
@@ -110,13 +113,16 @@ form {
 }
 
     .gamebox .gamespan-title {
-        float: left;
+        margin: 10px auto;
         font-size: 24px;
         font-weight: bold;
+        white-space: nowrap;
     }
 
     .gamebox .gamespan-intro {
-        float: left;
+        margin: 5px auto;
+        font-size: 16px;
+        width: 500px;
     }
 
     .gamebox .gamelogo {

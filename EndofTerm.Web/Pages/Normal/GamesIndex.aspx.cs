@@ -45,24 +45,40 @@ public partial class Pages_Normal_GamesIndex : System.Web.UI.Page
 
     private void CreateGameBox()
     {
+        var gameList = gamesService.GetHotGames();
         if (ddlGametype.SelectedValue != string.Empty)
         {
-            var gameList = gamesService.GetGamesInfoByTypeId(int.Parse(ddlGametype.SelectedValue));//获取游戏信息
+            if (ddlGametype.SelectedItem.Text == "热门")
+            {
+                gameList = gamesService.GetHotGames();
+            }
+            else
+                gameList = gamesService.GetGamesInfoByTypeId(int.Parse(ddlGametype.SelectedValue));//获取游戏信息
             for (int i = 0; i < gameList.Count; i++)//动态生成gamebox
             {
-                Panel pnl = new Panel() { ID = "div" + i.ToString(), CssClass = "gamebox" }; //div
+                Panel pnl = new Panel() { ID = "div1" + i.ToString(), CssClass = "gamebox" }; //div
 
                 //创建游戏logo的image控件
-                Image imgGameLogo = new Image() { ID = "ImgGameLogo" + i, CssClass = "gamelogo", ImageUrl = Server.MapPath(gameList[i].Image) };
+                Image imgGameLogo = new Image() { ID = "ImgGameLogo" + i, CssClass = "gamelogo" };
+                imgGameLogo.ImageUrl = "../../Images/" + gameList[i].Image;
                 pnl.Controls.Add(imgGameLogo);
+                //Response.Write("<img class=\"gamelogo\" src=\".. / .. / Images / 真人快打.png\" />");
                 //创建游戏标题label控件
-                Label lblGameTitle = new Label() { ID = "lblText" + i, CssClass = "gamespan-title", Text = gameList[i].Name }; //span
+
+                //Panel pnlTitle = new Panel() { ID = "div2" + i.ToString() }; //div
+                Label lblGameTitle = new Label() { ID = "lblGameTitle" + i, CssClass = "gamespan-title", Text = gameList[i].Name }; //span
                 pnl.Controls.Add(lblGameTitle);
+                //pnlTitle.Controls.Add(lblGameTitle);
+                //pnl.Controls.Add(pnlTitle);
                 //换行
-                pnl.Controls.Add(new Literal() { Text = "<br />" });
+                //pnl.Controls.Add(new Literal() { Text = "<br/><br/>" });
                 //创建游戏介绍label控件
-                Label lblGameIntro = new Label() { ID = "lblButton" + i, CssClass = "gamespan-intro", Text = gameList[i].Introduce };
+
+                //Panel pnlIntro = new Panel() { ID = "div3" + i.ToString() }; //div
+                Label lblGameIntro = new Label() { ID = "lblGameIntro" + i, CssClass = "gamespan-intro", Text = gameList[i].Introduce };
                 pnl.Controls.Add(lblGameIntro);
+                //pnlIntro.Controls.Add(lblGameIntro);
+                //pnl.Controls.Add(pnlIntro);
 
                 pnlMain.Controls.Add(pnl);
             }

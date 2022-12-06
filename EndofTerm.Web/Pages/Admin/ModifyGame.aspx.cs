@@ -28,10 +28,10 @@ public partial class Pages_Admin_ModifyGame : System.Web.UI.Page
     protected void btnUploadImg_Click(object sender, EventArgs e)
     {
         bool bok = false;//默认为false
-        string path = Server.MapPath("Images");//储存文件夹路径
-        if (this.fuLogo.HasFile)//检测是否有上传文件
+        string path = Server.MapPath("~/Images/");//储存文件夹路径
+        if (fuLogo.HasFile)//检测是否有上传文件
         {
-            string file = System.IO.Path.GetExtension(this.fuLogo.FileName).ToLower();//获取文件夹下的文件路径
+            string file = System.IO.Path.GetExtension(fuLogo.FileName).ToLower();//获取文件夹下的文件路径
             string[] allow = new string[] { ".png", ".jpg", ".gif", ".bmp", ".jpeg" };//后缀名数组
 
             foreach (string s in allow)//读取后缀名数组
@@ -46,30 +46,30 @@ public partial class Pages_Admin_ModifyGame : System.Web.UI.Page
             {
                 try
                 {
-                    this.fuLogo.PostedFile.SaveAs(path + fuLogo.FileName);//上传文件
-                    this.lblImgTip.Text = "文件" + fuLogo.FileName + "上传成功!";
+                    fuLogo.SaveAs(path + fuLogo.FileName);//上传文件
+                    lblImgTip.Text = "文件 " + fuLogo.FileName + " 上传成功!";
                 }
                 catch (Exception ex)
                 {
-                    this.lblImgTip.Text = "文件上传失败!" + ex.Message;
+                    lblImgTip.Text = "文件上传失败! " + ex.Message;
                 }
             }
             else
             {
-                this.lblImgTip.Text = "上传的图片格式不正确：只能上传.png,jpg,.gif,.bmp,.jpeg";
+                lblImgTip.Text = "上传的图片格式不正确：只能上传.png,jpg,.gif,.bmp,.jpeg";
             }
         }
 
-        this.Image1.ImageUrl = this.Request.ApplicationPath + ("Images" + fuLogo.FileName);//把上传的图片赋给Image1路径
+        Image1.ImageUrl = Server.MapPath("~/Images/" + fuLogo.FileName);//把上传的图片赋给Image1路径
 
-        Application["imgUrl"] = "~/Images/" + this.fuLogo.FileName;
+        Application["imgName"] = fuLogo.FileName;
     }
 
     protected void btnUploadAll_Click(object sender, EventArgs e)
     {
-        if (rfvGameName.IsValid && rfvGamePrice.IsValid && rfvGameIntro.IsValid && fuLogo.HasFile)//检验是否都不为空
+        if (rfvGameName.IsValid && rfvGamePrice.IsValid && rfvGameIntro.IsValid && (string)Application["imgName"] != string.Empty)//检验是否都不为空
         {
-            gamesService.UpdateGame(selectedGameId, int.Parse(ddlChooseType.SelectedValue), tbGameName.Text.Trim(), float.Parse(tbGamePrice.Text.Trim()), tbGameIntro.Text.Trim(), Application["imgUrl"].ToString(), cbIsHot.Checked);
+            gamesService.UpdateGame(selectedGameId, int.Parse(ddlChooseType.SelectedValue), tbGameName.Text.Trim(), float.Parse(tbGamePrice.Text.Trim()), tbGameIntro.Text.Trim(), Application["imgName"].ToString(), cbIsHot.Checked);
             lblTip.Text = tbGameName.Text + "提交成功！";
             tbGameIntro.Text = "";
             tbGameName.Text = "";

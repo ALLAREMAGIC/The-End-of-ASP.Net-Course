@@ -58,7 +58,6 @@ namespace EndofTerm.BLL
                 games.Image = img.Trim();
                 games.IsHot = isHot ? 1 : 0;
 
-                db.Games.Add(games);
                 db.SaveChanges();
             }
         }
@@ -102,6 +101,11 @@ namespace EndofTerm.BLL
         {
             gameName = gameName.Trim();
             return db.Games.Where(p => p.Name.Equals(gameName)).ToList();
+        }
+
+        public List<Games> GetHotGames()
+        {
+            return db.Games.Where(p => p.IsHot.Equals(1)).ToList();
         }
     }
 }

@@ -59,7 +59,7 @@
                 <div class="functionbtn">
                     <span>logo上传：</span>
                     <div>
-                        <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/lmage_4.jpeg" Width="65px" Height="65px" ImageAlign="Left" />
+                        <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/真人快打.png" Width="65px" Height="65px" ImageAlign="Left" />
                     </div>
 
                     <div>
