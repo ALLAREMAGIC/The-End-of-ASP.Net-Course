@@ -56,18 +56,18 @@ public partial class Pages_Normal_GamesIndex : System.Web.UI.Page
                 gameList = gamesService.GetGamesInfoByTypeId(int.Parse(ddlGametype.SelectedValue));//获取游戏信息
             for (int i = 0; i < gameList.Count; i++)//动态生成gamebox
             {
-                Panel pnl = new Panel() { ID = "div1" + i.ToString(), CssClass = "gamebox" }; //div
-
+                Panel pnl = new Panel() { ID = "div0" + i.ToString(), CssClass = "gamebox" };
                 //创建游戏logo的image控件
-                Image imgGameLogo = new Image() { ID = "ImgGameLogo" + i, CssClass = "gamelogo" };
-                imgGameLogo.ImageUrl = "../../Images/" + gameList[i].Image;
-                pnl.Controls.Add(imgGameLogo);
+                //Image imgGameLogo = new Image() { ID = "ImgGameLogo" + i, CssClass = "gamelogo",ImageUrl = "../../Images/" + gameList[i].Image };
+                pnl.Controls.Add(new Image() { ID = "ImgGameLogo" + i, CssClass = "gamelogo", ImageUrl = "../../Images/" + gameList[i].Image });
                 //Response.Write("<img class=\"gamelogo\" src=\".. / .. / Images / 真人快打.png\" />");
                 //创建游戏标题label控件
 
+                pnl.Controls.Add(new Literal() { Text = "<br/><br/>" });
+
                 //Panel pnlTitle = new Panel() { ID = "div2" + i.ToString() }; //div
-                Label lblGameTitle = new Label() { ID = "lblGameTitle" + i, CssClass = "gamespan-title", Text = gameList[i].Name }; //span
-                pnl.Controls.Add(lblGameTitle);
+                //HyperLink lblGameTitle = new HyperLink() { ID = "hplGameTitle" + i, CssClass = "gamespan-title", Text = gameList[i].Name, NavigateUrl = "GameContent.aspx?gameid=" + gameList[i].GameId, Target = "_blank" };
+                pnl.Controls.Add(new HyperLink() { ID = "hplGameTitle" + i, CssClass = "gamespan-title", Text = gameList[i].Name, NavigateUrl = "GameContent.aspx?gameid=" + gameList[i].GameId, Target = "_blank" });
                 //pnlTitle.Controls.Add(lblGameTitle);
                 //pnl.Controls.Add(pnlTitle);
                 //换行
@@ -75,10 +75,11 @@ public partial class Pages_Normal_GamesIndex : System.Web.UI.Page
                 //创建游戏介绍label控件
 
                 //Panel pnlIntro = new Panel() { ID = "div3" + i.ToString() }; //div
-                Label lblGameIntro = new Label() { ID = "lblGameIntro" + i, CssClass = "gamespan-intro", Text = gameList[i].Introduce };
-                pnl.Controls.Add(lblGameIntro);
+                //HyperLink lblGameIntro = new HyperLink() { ID = "hplGameIntro" + i, CssClass = "gamespan-intro", Text = gameList[i].Introduce, NavigateUrl = "GameContent.aspx?gameid=" + gameList[i].GameId, Target = "_blank" };
+                //pnl.Controls.Add(lblGameIntro);
                 //pnlIntro.Controls.Add(lblGameIntro);
                 //pnl.Controls.Add(pnlIntro);
+                pnl.Controls.Add(new HyperLink() { Text = "点击查看更多", CssClass = "pressmore", NavigateUrl = "GameContent.aspx?gameid=" + gameList[i].GameId, Target = "_blank" });
 
                 pnlMain.Controls.Add(pnl);
             }

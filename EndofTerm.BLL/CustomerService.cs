@@ -7,12 +7,6 @@ namespace EndofTerm.BLL
     {
         private EndofTermEntities db = new EndofTermEntities();
 
-        /// <summary>
-        /// 检查输入的用户名和密码是否正确
-        /// </summary>
-        /// <param name="name">用户名</param>
-        /// <param name="password">密码</param>
-        /// <returns>若用户名和密码正确则返回用户Id，否则返回0</returns>
         public int CheckLogin(string name, string password)
         {
             //通过DAL数据访问层中的Customer类查询输入的用户名和密码是否正确，若正确则返回相应的用户对象，否则返回null
@@ -27,11 +21,6 @@ namespace EndofTerm.BLL
             }
         }
 
-        /// <summary>
-        /// 判断输入的用户名是否重名
-        /// </summary>
-        /// <param name="name">输入的用户名</param>
-        /// <returns>当用户名重名时返回true，否则返回false</returns>
         public bool IsNameExist(string name)
         {
             //通过数据访问层中的Customer类查询输入的用户名是否重名，若重名则返回用户名，否则返回null
@@ -46,11 +35,6 @@ namespace EndofTerm.BLL
             }
         }
 
-        /// <summary>
-        /// 向MyPetShop数据库中的Customer表插入新用户记录
-        /// </summary>
-        /// <param name="name">用户名</param>
-        /// <param name="password">密码</param>
         public void Insert(string name, string password)
         {
             Customer customer = new Customer();

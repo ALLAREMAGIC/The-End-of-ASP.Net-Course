@@ -8,16 +8,6 @@ namespace EndofTerm.BLL
     {
         private EndofTermEntities db = new EndofTermEntities();
 
-        /// <summary>
-        /// 模糊查找商品名中包含指定文本的商品，再返回满足条件的商品列表
-        /// </summary>
-        /// <param name="searchText">指定的文本</param>
-        /// <returns>满足条件的商品列表</returns>
-        public List<Games> GetGameBySearchText(string searchText)
-        {
-            return (db.Games.Where(p => p.Name.Contains(searchText))).ToList();
-        }
-
         public bool IsGameNameExisit(string gameName)
         {
             if (GetGamesInfoByGameName(gameName).Count == 0)
@@ -26,12 +16,6 @@ namespace EndofTerm.BLL
                 return false;
         }
 
-        /// <summary>
-        /// 向MyPetShop数据库中的Customer表插入新用户记录
-        /// </summary>
-        /// <param name="name">用户名</param>
-        /// <param name="password">密码</param>
-        /// <param name="email">电子邮件地址</param>
         public void InsertGame(int typeId, string name, float price, string intro, string img, bool isHot)//插入游戏
         {
             Games games = new Games();
