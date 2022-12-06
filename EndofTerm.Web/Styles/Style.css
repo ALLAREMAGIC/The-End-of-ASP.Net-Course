@@ -38,6 +38,7 @@ body {
     margin: 0px;
     background-color: #fffeee;
     text-align: center;
+    height: 685px;
 }
 
 form {
@@ -120,9 +121,9 @@ form {
 
     .gamebox .gamelogo {
         float: left;
+        width: 240px;
+        height: 111px;
         vertical-align: middle;
-        height: 108px;
-        width: 108px;
     }
 
 .addgamebox {

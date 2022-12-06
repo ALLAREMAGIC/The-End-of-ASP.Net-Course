@@ -18,6 +18,14 @@ namespace EndofTerm.BLL
             return (db.Games.Where(p => p.Name.Contains(searchText))).ToList();
         }
 
+        public bool IsGameNameExisit(string gameName)
+        {
+            if (GetGamesInfoByGameName(gameName).Count == 0)
+                return true;
+            else
+                return false;
+        }
+
         /// <summary>
         /// 向MyPetShop数据库中的Customer表插入新用户记录
         /// </summary>
@@ -41,21 +49,24 @@ namespace EndofTerm.BLL
         public void UpdateGame(int gameId, int typeId, string name, float price, string intro, string img, bool isHot)//插入游戏
         {
             Games games = db.Games.Find(gameId);
-            games.TypeId = typeId;
-            games.Name = name;
-            games.Price = price;
-            games.Introduce = intro;
-            games.Image = img;
-            games.IsHot = isHot ? 1 : 0;
+            if (games != null)
+            {
+                games.TypeId = typeId;
+                games.Name = name.Trim();
+                games.Price = price;
+                games.Introduce = intro.Trim();
+                games.Image = img.Trim();
+                games.IsHot = isHot ? 1 : 0;
 
-            db.Games.Add(games);
-            db.SaveChanges();
+                db.Games.Add(games);
+                db.SaveChanges();
+            }
         }
 
         public void InsertType(string typeName)//插入类型
         {
             Type type = new Type();
-            type.TypeName = typeName;
+            type.TypeName = typeName.Trim();
 
             db.Type.Add(type);
             db.SaveChanges();
@@ -64,20 +75,33 @@ namespace EndofTerm.BLL
         public void UpdateType(int typeId, string typeName)//插入类型
         {
             Type type = db.Type.Find(typeId);
-            type.TypeName = typeName;
+            if (type != null)
+            {
+                type.TypeName = typeName.Trim();
 
-            db.Type.Add(type);
-            db.SaveChanges();
+                db.SaveChanges();
+            }
         }
 
-        public Games GetGameInfoByGameId(int gameId)
+        public Games GetGameInfoByGameId(int gameId)//通过gameId获取game信息
         {
             return db.Games.Where(p => p.GameId.Equals(gameId)).FirstOrDefault();
         }
 
-        public Type GetTypeInfoByTypeId(int typeId)
+        public Type GetTypeInfoByTypeId(int typeId)//通过typeId获取type信息
         {
             return db.Type.Where(p => p.TypeId.Equals(typeId)).FirstOrDefault();
+        }
+
+        public List<Games> GetGamesInfoByTypeId(int typeId)//通过typeId获取games信息
+        {
+            return db.Games.Where(p => p.TypeId.Equals(typeId)).ToList();
+        }
+
+        public List<Games> GetGamesInfoByGameName(string gameName)//通过gameName获取games信息
+        {
+            gameName = gameName.Trim();
+            return db.Games.Where(p => p.Name.Equals(gameName)).ToList();
         }
     }
 }

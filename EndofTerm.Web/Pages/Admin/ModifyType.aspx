@@ -28,7 +28,7 @@
             <h2>修改游戏类型</h2>
             <div class="addgamebox">
                 <div class="functionbtn">
-                    所选类型名称：<asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSourceType" DataTextField="TypeName" DataValueField="TypeId" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged"></asp:DropDownList>
+                    所选类型名称：<asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSourceType" DataTextField="TypeName" DataValueField="TypeId" AutoPostBack="True" EnableTheming="True"></asp:DropDownList>
                     <asp:SqlDataSource ID="SqlDataSourceType" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Type]"></asp:SqlDataSource>
                 </div>
                 <div class="functionbtn">

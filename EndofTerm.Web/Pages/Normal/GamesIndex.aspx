@@ -27,16 +27,20 @@
             <br />
             <br />
             <span style="vertical-align: middle; font-size: 30px;">请选择游戏类别：</span>
-            <asp:DropDownList ID="DropDownList1" runat="server" Height="30px" Width="124px" Font-Bold="True" Font-Size="24px" Style="margin-top: 0px" DataSourceID="Games" DataTextField="TypeName" DataValueField="TypeId" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged"></asp:DropDownList>
-            <asp:SqlDataSource ID="Games" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Type]"></asp:SqlDataSource>
-            <div class="gamebox">
-                <asp:Image ID="ImgGameLogo1" runat="server" class="gamelogo" />
+            <asp:DropDownList ID="ddlGametype" runat="server" Height="30px" Width="124px" Font-Bold="True" Font-Size="24px" Style="margin-top: 0px" DataSourceID="Type" DataTextField="TypeName" DataValueField="TypeId" OnSelectedIndexChanged="ddlGametype_SelectedIndexChanged"></asp:DropDownList>
+            <!--<div class="gamebox">
+                <asp:Image ID="ImgGameLogo1" runat="server" class="gamelogo" ImageUrl="~/Images/真人快打.png" />
                 <asp:Label ID="lblGameName1" runat="server" Text="游戏标题" class="gamespan-title"></asp:Label>
                 <br />
                 <br />
                 <asp:Label ID="lblGameIntro1" runat="server" Text="游戏简介" class="gamespan-intro"></asp:Label>
-            </div>
+            </div>-->
+            <asp:Panel ID="pnlMain" runat="server" Height="100%">
+            </asp:Panel>
         </div>
+        <span style="vertical-align: middle; font-size: 30px;">
+            <asp:SqlDataSource ID="Type" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Type]"></asp:SqlDataSource>
+        </span>
     </form>
 </body>
 </html>

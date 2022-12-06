@@ -9,7 +9,6 @@ using EndofTerm.BLL;
 public partial class Pages_Admin_ModifyType : System.Web.UI.Page
 {
     private GamesService gamesService = new GamesService();
-    private int selectedTypeId;
 
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -26,15 +25,11 @@ public partial class Pages_Admin_ModifyType : System.Web.UI.Page
     {
         if (rfvTypeName.IsValid)
         {
-            gamesService.UpdateType(selectedTypeId, tbTypeName.Text);
+            gamesService.UpdateType(int.Parse(DropDownList1.SelectedValue), tbTypeName.Text);
             lblTip.Text = tbTypeName.Text + "提交成功！";
             tbTypeName.Text = "";
+            DropDownList1.DataBind();
         }
-    }
-
-    protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
-    {
-        selectedTypeId = int.Parse(DropDownList1.SelectedValue);
     }
 
     private void CheckUser()

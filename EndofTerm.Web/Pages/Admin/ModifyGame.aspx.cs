@@ -67,7 +67,7 @@ public partial class Pages_Admin_ModifyGame : System.Web.UI.Page
 
     protected void btnUploadAll_Click(object sender, EventArgs e)
     {
-        if (rfvGameName.IsValid && rfvGamePrice.IsValid && rfvGameIntro.IsValid)//检验是否都不为空
+        if (rfvGameName.IsValid && rfvGamePrice.IsValid && rfvGameIntro.IsValid && fuLogo.HasFile)//检验是否都不为空
         {
             gamesService.UpdateGame(selectedGameId, int.Parse(ddlChooseType.SelectedValue), tbGameName.Text.Trim(), float.Parse(tbGamePrice.Text.Trim()), tbGameIntro.Text.Trim(), Application["imgUrl"].ToString(), cbIsHot.Checked);
             lblTip.Text = tbGameName.Text + "提交成功！";

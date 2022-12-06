@@ -57,7 +57,7 @@ public partial class Pages_Admin_AddGame : System.Web.UI.Page
             }
         }
 
-        this.Image1.ImageUrl = "~/Images/" + fuLogo.FileName;//把上传的图片赋给Image1路径
+        this.Image1.ImageUrl = path + fuLogo.FileName;//把上传的图片赋给Image1路径
 
         Application["imgUrl"] = "~/Images/" + this.fuLogo.FileName;
     }
@@ -71,6 +71,10 @@ public partial class Pages_Admin_AddGame : System.Web.UI.Page
             tbGameIntro.Text = "";
             tbGameName.Text = "";
             tbGamePrice.Text = "";
+        }
+        else if (gamesService.IsGameNameExisit(tbGameName.Text.Trim()))
+        {
+            lblTip.Text = "提交失败\n数据库中已有该游戏！";
         }
         else
         {
