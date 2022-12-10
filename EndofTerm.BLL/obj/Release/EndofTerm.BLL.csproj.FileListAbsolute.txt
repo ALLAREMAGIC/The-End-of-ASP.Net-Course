@@ -1,0 +1,17 @@
+C:\Users\Magic Computer\Desktop\临时文件\大三上动态网站2\仓库\WangYuHui-s-Of-ASP.NET-Course期末\期末\EndofTerm.BLL\bin\Release\EndofTerm.BLL.dll.config
+C:\Users\Magic Computer\Desktop\临时文件\大三上动态网站2\仓库\WangYuHui-s-Of-ASP.NET-Course期末\期末\EndofTerm.BLL\bin\Release\EndofTerm.BLL.dll
+C:\Users\Magic Computer\Desktop\临时文件\大三上动态网站2\仓库\WangYuHui-s-Of-ASP.NET-Course期末\期末\EndofTerm.BLL\bin\Release\EndofTerm.BLL.pdb
+C:\Users\Magic Computer\Desktop\临时文件\大三上动态网站2\仓库\WangYuHui-s-Of-ASP.NET-Course期末\期末\EndofTerm.BLL\bin\Release\EndofTerm.DAL.dll
+C:\Users\Magic Computer\Desktop\临时文件\大三上动态网站2\仓库\WangYuHui-s-Of-ASP.NET-Course期末\期末\EndofTerm.BLL\bin\Release\EntityFramework.dll
+C:\Users\Magic Computer\Desktop\临时文件\大三上动态网站2\仓库\WangYuHui-s-Of-ASP.NET-Course期末\期末\EndofTerm.BLL\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\Magic Computer\Desktop\临时文件\大三上动态网站2\仓库\WangYuHui-s-Of-ASP.NET-Course期末\期末\EndofTerm.BLL\bin\Release\EndofTerm.DAL.pdb
+C:\Users\Magic Computer\Desktop\临时文件\大三上动态网站2\仓库\WangYuHui-s-Of-ASP.NET-Course期末\期末\EndofTerm.BLL\bin\Release\EndofTerm.DAL.dll.config
+C:\Users\Magic Computer\Desktop\临时文件\大三上动态网站2\仓库\WangYuHui-s-Of-ASP.NET-Course期末\期末\EndofTerm.BLL\bin\Release\EntityFramework.xml
+C:\Users\Magic Computer\Desktop\临时文件\大三上动态网站2\仓库\WangYuHui-s-Of-ASP.NET-Course期末\期末\EndofTerm.BLL\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\Magic Computer\Desktop\临时文件\大三上动态网站2\仓库\WangYuHui-s-Of-ASP.NET-Course期末\期末\EndofTerm.BLL\bin\Release\zh-Hans\EntityFramework.resources.dll
+C:\Users\Magic Computer\Desktop\临时文件\大三上动态网站2\仓库\WangYuHui-s-Of-ASP.NET-Course期末\期末\EndofTerm.BLL\bin\Release\zh-Hans\EntityFramework.SqlServer.resources.dll
+C:\Users\Magic Computer\Desktop\临时文件\大三上动态网站2\仓库\WangYuHui-s-Of-ASP.NET-Course期末\期末\EndofTerm.BLL\obj\Release\EndofTerm.BLL.csproj.AssemblyReference.cache
+C:\Users\Magic Computer\Desktop\临时文件\大三上动态网站2\仓库\WangYuHui-s-Of-ASP.NET-Course期末\期末\EndofTerm.BLL\obj\Release\EndofTerm.BLL.csproj.CoreCompileInputs.cache
+C:\Users\Magic Computer\Desktop\临时文件\大三上动态网站2\仓库\WangYuHui-s-Of-ASP.NET-Course期末\期末\EndofTerm.BLL\obj\Release\EndofTerm.BLL.csproj.CopyComplete
+C:\Users\Magic Computer\Desktop\临时文件\大三上动态网站2\仓库\WangYuHui-s-Of-ASP.NET-Course期末\期末\EndofTerm.BLL\obj\Release\EndofTerm.BLL.dll
+C:\Users\Magic Computer\Desktop\临时文件\大三上动态网站2\仓库\WangYuHui-s-Of-ASP.NET-Course期末\期末\EndofTerm.BLL\obj\Release\EndofTerm.BLL.pdb

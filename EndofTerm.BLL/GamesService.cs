@@ -71,13 +71,10 @@ namespace EndofTerm.BLL
             return db.Games.Where(p => p.GameId.Equals(gameId)).FirstOrDefault();
         }
 
-        public Type GetTypeInfoByTypeId(int typeId)//通过typeId获取type信息
-        {
-            return db.Type.Where(p => p.TypeId.Equals(typeId)).FirstOrDefault();
-        }
-
         public List<Games> GetGamesInfoByTypeId(int typeId)//通过typeId获取games信息
         {
+            if (GetTypeInfoByTypeId(typeId).TypeName == "热门")
+                return GetHotGames();
             return db.Games.Where(p => p.TypeId.Equals(typeId)).ToList();
         }
 
@@ -90,6 +87,16 @@ namespace EndofTerm.BLL
         public List<Games> GetHotGames()
         {
             return db.Games.Where(p => p.IsHot.Equals(1)).ToList();
+        }
+
+        public Type GetTypeInfoByTypeId(int typeId)//通过typeId获取type信息
+        {
+            return db.Type.Where(p => p.TypeId.Equals(typeId)).FirstOrDefault();
+        }
+
+        public List<int> GetTypesId()//通过typeId获取type信息
+        {
+            return db.Type.Select(p => p.TypeId).ToList();
         }
     }
 }

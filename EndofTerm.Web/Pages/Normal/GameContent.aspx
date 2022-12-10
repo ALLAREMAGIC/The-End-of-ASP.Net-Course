@@ -30,14 +30,19 @@
             <div class="gamecontentbox">
                 <div>
                     <div style="height: 119px">
-                        <asp:Image ID="ImgGameLogo" runat="server" CssClass="gamelogo" />
-
-                        <asp:Label ID="lblGameName" runat="server" CssClass="gamespan-title"></asp:Label>
-                        <br />
-                        <br />
-                        <asp:Label ID="lblGameIntro" runat="server" CssClass="gamespanintro"></asp:Label>
+                        <asp:Image ID="ImgGameLogo" runat="server" CssClass="game-logo" />
+                        <div style="float: left; width: 80%;">
+                            <asp:Label ID="lblGameName" runat="server" CssClass="gamespan-title"></asp:Label>
+                            <br />
+                            <br />
+                            <div class="gamespan-intro">
+                                <asp:Label ID="lblGameIntro" runat="server" CssClass="gamespan-intro"></asp:Label>
+                            </div>
+                        </div>
                     </div>
-                    <asp:Label ID="lblGamePirce" runat="server" CssClass="gameprice" ForeColor="White"></asp:Label>
+                    <br />
+                    <br />
+                    <asp:Label ID="lblGamePirce" runat="server" CssClass="game-price" ForeColor="White"></asp:Label>
                 </div>
             </div>
 

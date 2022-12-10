@@ -20,7 +20,7 @@
                     <tr>
                         <td>用户名:</td>
                         <td>
-                            <asp:TextBox ID="txtName" runat="server"></asp:TextBox></td>
+                            <asp:TextBox ID="txtName" runat="server" CssClass="inputcss" Width="120px"></asp:TextBox></td>
                         <td>
                             <asp:RequiredFieldValidator ControlToValidate="txtName" Display="Dynamic" ForeColor="Red" ID="rfvName" runat="server" ErrorMessage="必填">
                             </asp:RequiredFieldValidator>
@@ -29,7 +29,7 @@
                     <tr>
                         <td>密码:</td>
                         <td>
-                            <asp:TextBox ID="txtPwd" runat="server" TextMode="Password"></asp:TextBox></td>
+                            <asp:TextBox ID="txtPwd" runat="server" TextMode="Password" CssClass="inputcss" Width="120px"></asp:TextBox></td>
                         <td>
                             <asp:RequiredFieldValidator ControlToValidate="txtPwd" Display="Dynamic" ForeColor="Red" ID="rfvPwd" runat="server" ErrorMessage="必填">
                             </asp:RequiredFieldValidator>
@@ -38,7 +38,7 @@
                     <tr>
                         <td>确认密码:</td>
                         <td>
-                            <asp:TextBox ID="txtPwdAgain" runat="server" TextMode="Password"></asp:TextBox></td>
+                            <asp:TextBox ID="txtPwdAgain" runat="server" TextMode="Password" CssClass="inputcss" Width="120px"></asp:TextBox></td>
                         <td>
                             <asp:RequiredFieldValidator ControlToValidate="txtPwdAgain" Display="Dynamic" ForeColor="Red" ID="rfvPwdAgain" runat="server" ErrorMessage="必填">
                             </asp:RequiredFieldValidator>

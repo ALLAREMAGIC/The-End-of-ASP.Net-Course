@@ -61,7 +61,7 @@ form {
     margin: 0 auto;
     padding: 4px 2px 2px 10px;
     text-align: left;
-    background-color: #fffeee;
+    /*background-color: #fffeee;*/
 }
 
     .header .logo {
@@ -124,44 +124,110 @@ form {
     }
 }
 
-.gamebox {
+.typebox-title {
+    overflow: hidden;
+    margin: auto;
+    width: 80%;
+}
+
+    .typebox-title .gamesbox-title {
+        font-size: 20px;
+        font-weight: 3px;
+        margin-left: 20px;
+        float: left;
+    }
+
+    .typebox-title .gamesbox-more {
+        margin-right: 20px;
+        float: right;
+        color: rgb(88 88 88 / 0.75);
+    }
+
+.gamesbox {
+    width: 80%;
+    min-height: 111px;
+    overflow: hidden;
+    margin: auto;
     text-align: center;
-    display: flex;
-    width: 1200px;
-    height: 111px;
+}
+
+    .gamesbox .oneline {
+        margin: auto;
+        min-height: 111px;
+        overflow: hidden;
+        text-align: center;
+        display: inline-flex;
+    }
+
+.gamelongbox {
+    float: left;
+    text-align: center;
+    width: 80%;
+    min-height: 111px;
     border: 3px solid gold;
-    border-radius: 20px;
+    border-radius: 5%;
     padding: 30px;
-    margin: 30px auto;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 10px 20px -4px, rgba(0, 0, 0, 0.3) 0px 6px 12px -6px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    margin: auto;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 5px 10px -2px, rgba(0, 0, 0, 0.3) 0px 6px 12px -6px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    animation: fadeout 1s 1;
+}
+
+    .gamelongbox .gamespan-title {
+        width: 100%;
+        margin: auto;
+        font-size: 20px;
+        font-weight: bold;
+        /*white-space: nowrap;*/
+    }
+
+    .gamelongbox .gamespan-intro {
+        margin: auto;
+        font-size: 16px;
+        width: 70%;
+    }
+
+    .gamelongbox .gamelogo {
+        float: left;
+        width: 20%;
+        vertical-align: middle;
+    }
+
+.gamebox {
+    float: left;
+    text-align: center;
+    width: 20%;
+    min-height: 111px;
+    border: 3px solid gold;
+    border-radius: 5%;
+    padding: 30px;
+    margin: 20px auto;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 5px 10px -2px, rgba(0, 0, 0, 0.3) 0px 6px 12px -6px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     animation: fadeout 1s 1;
 }
 
     .gamebox .gamespan-title {
-        width: 600px;
+        width: 100%;
         margin: auto;
-        font-size: 24px;
+        font-size: 20px;
         font-weight: bold;
-        white-space: nowrap;
+        /*white-space: nowrap;*/
     }
 
     .gamebox .gamespan-intro {
         margin: auto;
         font-size: 16px;
-        width: 500px;
+        width: 70%;
     }
 
     .gamebox .gamelogo {
-        float: left;
-        width: 240px;
-        height: 111px;
-        vertical-align: middle;
+        text-align: center;
+        width: 100%;
     }
 
-    .gamebox .pressmore {
-        margin: auto;
-        color: rgb(88 88 88 / 0.75);
-    }
+.pressmore {
+    margin: auto;
+    color: rgb(88 88 88 / 0.75);
+}
 
 @keyframes fadeout {
     0% {
@@ -216,7 +282,7 @@ form {
 
 .gamecontentbox {
     text-align: center;
-    display: grid;
+    display: flex;
     width: 1200px;
     height: 180px;
     border: 3px solid gold;
@@ -237,39 +303,52 @@ form {
     .gamecontentbox .gamespan-intro {
         margin: auto;
         font-size: 16px;
-        width: 500px;
+        width: 61.8%;
     }
 
-    .gamecontentbox .gamelogo {
+    .gamecontentbox .game-logo {
+        Height: 111px;
+        Width: 240px;
         float: left;
-        width: 240px;
-        height: 111px;
         vertical-align: middle;
     }
 
-    .gamecontentbox .gameprice {
-        padding: 3px;
+    .gamecontentbox .game-price {
+        margin: auto;
+        padding: 5px;
+        padding-inline: 30px;
         font-size: 22px;
         background-color: #009408;
         border: 2px solid rgb(0 148 8 / 0.29);
         border-radius: 12px;
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 5px 10px -2px inset, rgba(0, 0, 0, 0.3) 0px 3px 6px -3px inset;
+        box-shadow: rgba(0, 0, 0, 0.17) 0px -3px 6px 0px inset, rgba(0, 0, 0, 0.15) 0px -4px 2px 0px inset, rgba(0, 0, 0, 0.1) 0px -5px 2px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 4px 6px;
     }
 
 .ddlcss {
-    border-right: #0099cc 1px groove;
-    border-top: 1px solid #0099cc;
-    border-left: 1px solid #0099cc;
-    border-bottom: 1px inset #0099cc;
-    background-color: aliceblue;
+    height: 35px;
+    width: 100%;
+    font-size: 16px;
+    border: 1px solid #0099cc;
+    border-radius: 20px;
+    background-image: linear-gradient(45deg, gold, pink);
+    text-align: center;
+    animation: headerboxAni 3s infinite linear;
+    filter: hue-rotate(360deg);
     box-shadow: blue 0px 0px 0px 2px inset, rgb(255, 255, 255) 2px -2px 0px -1px, rgb(31, 193, 27) 2px -2px, rgb(255, 255, 255) 4px -4px 0px -3px, rgb(255, 217, 19) 4px -4px, rgb(255, 255, 255) 5px -5px 0px -1px, rgb(255, 156, 85) 5px -5px, rgb(255, 255, 255) 6px -6px 0px -4px, rgb(255, 85, 85) 6px -6px;
 }
+
+    .ddlcss option ul li {
+        text-align: center;
+        text-indent: 10px;
+        margin-top: 1px;
+        line-height: 25px;
+        background-color: blue;
+    }
 
 .inputcss {
     width: 100%;
     outline-style: none;
     border: 1px solid #ccc;
-    border-radius: 3px;
     padding: 4px 5px;
     font-size: 14px;
     font-weight: 700;
@@ -282,3 +361,18 @@ form {
         -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
         box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)
     }
+
+.menu {
+    float: left;
+    overflow: hidden;
+    max-width: 20%;
+    font-size: 1%;
+}
+
+    .menu ul {
+        list-style: none;
+    }
+
+        .menu ul li {
+            list-style: none;
+        }

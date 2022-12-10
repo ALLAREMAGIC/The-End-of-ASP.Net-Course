@@ -26,20 +26,178 @@
         <div>
             <br />
             <br />
-            <span style="vertical-align: middle; font-size: 30px;">请选择游戏类别：</span> <span style="vertical-align: middle; font-size: 30px;">
-                <asp:SqlDataSource ID="Type" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Type]"></asp:SqlDataSource>
-            </span>
-            <asp:DropDownList ID="ddlGametype" runat="server" Height="30px" Width="124px" Font-Bold="True" Font-Size="24px" Style="margin-top: 0px" DataSourceID="Type" DataTextField="TypeName" DataValueField="TypeId" OnSelectedIndexChanged="ddlGametype_SelectedIndexChanged" AutoPostBack="True" CssClass="ddlcss"></asp:DropDownList>
-            <%--<div class="gamebox">
-                <asp:Image ID="ImgGameLogo1" runat="server" class="gamelogo" ImageUrl="~/Images/真人快打.png" />
-                <asp:Label ID="lblGameName1" runat="server" Text="游戏标题" class="gamespan-title"></asp:Label>
+            <span style="vertical-align: middle; font-size: 30px;">欢迎来到本网站</span>
+            <asp:Panel ID="pnlMain" runat="server"></asp:Panel>
+            <%--<div>
+                <div class="typebox-title">
+                    <span class="gamesbox-title">热门游戏</span>
+                    <asp:HyperLink ID="hlTypeHot" runat="server" Text="游戏标题" CssClass="gamesbox-more">更多</asp:HyperLink>
+                </div>
                 <br />
+                <div class="gamesbox">
+                    <div class="oneline">
+                        <div class="gamebox">
+                            <asp:Image ID="Image1" runat="server" CssClass="gamelogo" ImageUrl="~/Images/真人快打.png" />
+                            <br />
+                            <asp:HyperLink ID="HyperLink1" runat="server" Text="游戏标题" CssClass="gamespan-title"></asp:HyperLink>
+                            <br />
+                            <asp:HyperLink ID="HyperLink2" runat="server" Text="点击查看更多" CssClass="pressmore"></asp:HyperLink>
+                        </div>
+                        <div class="gamebox">
+                            <asp:Image ID="Image2" runat="server" CssClass="gamelogo" ImageUrl="~/Images/真人快打.png" />
+                            <br />
+                            <asp:HyperLink ID="HyperLink3" runat="server" Text="游戏标题" CssClass="gamespan-title"></asp:HyperLink>
+                            <br />
+                            <asp:HyperLink ID="HyperLink4" runat="server" Text="点击查看更多" CssClass="pressmore"></asp:HyperLink>
+                        </div>
+                        <div class="gamebox">
+                            <asp:Image ID="Image3" runat="server" CssClass="gamelogo" ImageUrl="~/Images/真人快打.png" />
+                            <br />
+                            <asp:HyperLink ID="HyperLink5" runat="server" Text="游戏标题" CssClass="gamespan-title"></asp:HyperLink>
+                            <br />
+                            <asp:HyperLink ID="HyperLink6" runat="server" Text="点击查看更多" CssClass="pressmore"></asp:HyperLink>
+                        </div>
+                        <div class="gamebox">
+                            <asp:Image ID="Image4" runat="server" CssClass="gamelogo" ImageUrl="~/Images/真人快打.png" />
+                            <br />
+                            <asp:HyperLink ID="HyperLink7" runat="server" Text="游戏标题" CssClass="gamespan-title"></asp:HyperLink>
+                            <br />
+                            <asp:HyperLink ID="HyperLink8" runat="server" Text="点击查看更多" CssClass="pressmore"></asp:HyperLink>
+                        </div>
+                        <div class="gamebox">
+                            <asp:Image ID="Image5" runat="server" CssClass="gamelogo" ImageUrl="~/Images/真人快打.png" />
+                            <br />
+                            <asp:HyperLink ID="HyperLink9" runat="server" Text="游戏标题" CssClass="gamespan-title"></asp:HyperLink>
+                            <br />
+                            <asp:HyperLink ID="HyperLink10" runat="server" Text="点击查看更多" CssClass="pressmore"></asp:HyperLink>
+                        </div>
+                    </div>
+                    <div class="oneline">
+                        <div class="gamebox">
+                            <asp:Image ID="Image6" runat="server" CssClass="gamelogo" ImageUrl="~/Images/真人快打.png" />
+                            <br />
+                            <asp:HyperLink ID="HyperLink11" runat="server" Text="游戏标题" CssClass="gamespan-title"></asp:HyperLink>
+                            <br />
+                            <asp:HyperLink ID="HyperLink12" runat="server" Text="点击查看更多" CssClass="pressmore"></asp:HyperLink>
+                        </div>
+                        <div class="gamebox">
+                            <asp:Image ID="Image7" runat="server" CssClass="gamelogo" ImageUrl="~/Images/真人快打.png" />
+                            <br />
+                            <asp:HyperLink ID="HyperLink13" runat="server" Text="游戏标题" CssClass="gamespan-title"></asp:HyperLink>
+                            <br />
+                            <asp:HyperLink ID="HyperLink14" runat="server" Text="点击查看更多" CssClass="pressmore"></asp:HyperLink>
+                        </div>
+                        <div class="gamebox">
+                            <asp:Image ID="Image8" runat="server" CssClass="gamelogo" ImageUrl="~/Images/真人快打.png" />
+                            <br />
+                            <asp:HyperLink ID="HyperLink15" runat="server" Text="游戏标题" CssClass="gamespan-title"></asp:HyperLink>
+                            <br />
+                            <asp:HyperLink ID="HyperLink16" runat="server" Text="点击查看更多" CssClass="pressmore"></asp:HyperLink>
+                        </div>
+                        <div class="gamebox">
+                            <asp:Image ID="Image9" runat="server" CssClass="gamelogo" ImageUrl="~/Images/真人快打.png" />
+                            <br />
+                            <asp:HyperLink ID="HyperLink17" runat="server" Text="游戏标题" CssClass="gamespan-title"></asp:HyperLink>
+                            <br />
+                            <asp:HyperLink ID="HyperLink18" runat="server" Text="点击查看更多" CssClass="pressmore"></asp:HyperLink>
+                        </div>
+                        <div class="gamebox">
+                            <asp:Image ID="Image10" runat="server" CssClass="gamelogo" ImageUrl="~/Images/真人快打.png" />
+                            <br />
+                            <asp:HyperLink ID="HyperLink19" runat="server" Text="游戏标题" CssClass="gamespan-title"></asp:HyperLink>
+                            <br />
+                            <asp:HyperLink ID="HyperLink20" runat="server" Text="点击查看更多" CssClass="pressmore"></asp:HyperLink>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="typebox-title">
+                    <span class="gamesbox-title">全部游戏</span>
+                    <asp:HyperLink ID="HyperLink21" runat="server" Text="游戏标题" CssClass="gamesbox-more">更多</asp:HyperLink>
+                </div>
                 <br />
-                <asp:Label ID="lblGameIntro1" runat="server" Text="游戏简介" class="gamespan-intro" Height="16px"></asp:Label>
-            </div>--%>
-            <asp:Panel ID="pnlMain" runat="server" Height="100%">
-            </asp:Panel>
+                <div class="gamesbox">
+                    <div class="oneline">
+                        <div class="gamebox">
+                            <asp:Image ID="Image11" runat="server" CssClass="gamelogo" ImageUrl="~/Images/真人快打.png" />
+                            <br />
+                            <asp:HyperLink ID="HyperLink22" runat="server" Text="游戏标题" CssClass="gamespan-title"></asp:HyperLink>
+                            <br />
+                            <asp:HyperLink ID="HyperLink23" runat="server" Text="点击查看更多" CssClass="pressmore"></asp:HyperLink>
+                        </div>
+                        <div class="gamebox">
+                            <asp:Image ID="Image12" runat="server" CssClass="gamelogo" ImageUrl="~/Images/真人快打.png" />
+                            <br />
+                            <asp:HyperLink ID="HyperLink24" runat="server" Text="游戏标题" CssClass="gamespan-title"></asp:HyperLink>
+                            <br />
+                            <asp:HyperLink ID="HyperLink25" runat="server" Text="点击查看更多" CssClass="pressmore"></asp:HyperLink>
+                        </div>
+                        <div class="gamebox">
+                            <asp:Image ID="Image13" runat="server" CssClass="gamelogo" ImageUrl="~/Images/真人快打.png" />
+                            <br />
+                            <asp:HyperLink ID="HyperLink26" runat="server" Text="游戏标题" CssClass="gamespan-title"></asp:HyperLink>
+                            <br />
+                            <asp:HyperLink ID="HyperLink27" runat="server" Text="点击查看更多" CssClass="pressmore"></asp:HyperLink>
+                        </div>
+                        <div class="gamebox">
+                            <asp:Image ID="Image14" runat="server" CssClass="gamelogo" ImageUrl="~/Images/真人快打.png" />
+                            <br />
+                            <asp:HyperLink ID="HyperLink28" runat="server" Text="游戏标题" CssClass="gamespan-title"></asp:HyperLink>
+                            <br />
+                            <asp:HyperLink ID="HyperLink29" runat="server" Text="点击查看更多" CssClass="pressmore"></asp:HyperLink>
+                        </div>
+                        <div class="gamebox">
+                            <asp:Image ID="Image15" runat="server" CssClass="gamelogo" ImageUrl="~/Images/真人快打.png" />
+                            <br />
+                            <asp:HyperLink ID="HyperLink30" runat="server" Text="游戏标题" CssClass="gamespan-title"></asp:HyperLink>
+                            <br />
+                            <asp:HyperLink ID="HyperLink31" runat="server" Text="点击查看更多" CssClass="pressmore"></asp:HyperLink>
+                        </div>
+                    </div>
+                    <div class="oneline">
+                        <div class="gamebox">
+                            <asp:Image ID="Image16" runat="server" CssClass="gamelogo" ImageUrl="~/Images/真人快打.png" />
+                            <br />
+                            <asp:HyperLink ID="HyperLink32" runat="server" Text="游戏标题" CssClass="gamespan-title"></asp:HyperLink>
+                            <br />
+                            <asp:HyperLink ID="HyperLink33" runat="server" Text="点击查看更多" CssClass="pressmore"></asp:HyperLink>
+                        </div>
+                        <div class="gamebox">
+                            <asp:Image ID="Image17" runat="server" CssClass="gamelogo" ImageUrl="~/Images/真人快打.png" />
+                            <br />
+                            <asp:HyperLink ID="HyperLink34" runat="server" Text="游戏标题" CssClass="gamespan-title"></asp:HyperLink>
+                            <br />
+                            <asp:HyperLink ID="HyperLink35" runat="server" Text="点击查看更多" CssClass="pressmore"></asp:HyperLink>
+                        </div>
+                        <div class="gamebox">
+                            <asp:Image ID="Image18" runat="server" CssClass="gamelogo" ImageUrl="~/Images/真人快打.png" />
+                            <br />
+                            <asp:HyperLink ID="HyperLink36" runat="server" Text="游戏标题" CssClass="gamespan-title"></asp:HyperLink>
+                            <br />
+                            <asp:HyperLink ID="HyperLink37" runat="server" Text="点击查看更多" CssClass="pressmore"></asp:HyperLink>
+                        </div>
+                        <div class="gamebox">
+                            <asp:Image ID="Image19" runat="server" CssClass="gamelogo" ImageUrl="~/Images/真人快打.png" />
+                            <br />
+                            <asp:HyperLink ID="HyperLink38" runat="server" Text="游戏标题" CssClass="gamespan-title"></asp:HyperLink>
+                            <br />
+                            <asp:HyperLink ID="HyperLink39" runat="server" Text="点击查看更多" CssClass="pressmore"></asp:HyperLink>
+                        </div>
+                        <div class="gamebox">
+                            <asp:Image ID="Image20" runat="server" CssClass="gamelogo" ImageUrl="~/Images/真人快打.png" />
+                            <br />
+                            <asp:HyperLink ID="HyperLink40" runat="server" Text="游戏标题" CssClass="gamespan-title"></asp:HyperLink>
+                            <br />
+                            <asp:HyperLink ID="HyperLink41" runat="server" Text="点击查看更多" CssClass="pressmore"></asp:HyperLink>
+                        </div>
+                    </div>
+                </div>
         </div>
+        </div>--%>
+            <footer>
+                <div style="color: green;">神奇望出品</div>
+            </footer>
     </form>
 </body>
 </html>
