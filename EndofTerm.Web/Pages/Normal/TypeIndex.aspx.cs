@@ -53,10 +53,6 @@ public partial class Pages_Normal_TypeIndex : System.Web.UI.Page
         for (int i = 0; i < gameList.Count; i++)//动态生成gamebox
         {
             pnlMain.Controls.Add(CreateGameBox(i, gameList));
-            if (i % 5 == 0)
-            {
-                pnlMain.Controls.Add(new Literal() { Text = "<br />" });
-            }
         }
     }
 

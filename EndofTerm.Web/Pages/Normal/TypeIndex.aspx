@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>游戏索引</title>
+    <title>类型索引</title>
     <link href="../../Styles/Style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -26,13 +26,10 @@
         <div>
             <br />
             <br />
-            <span style="vertical-align: middle; font-size: 30px;"><%=typeTitle %></span> <span style="vertical-align: middle; font-size: 30px;"></span>
-
+            <span style="vertical-align: middle; font-size: 30px;"><%=typeTitle %></span>
             <asp:Panel ID="pnlMain" runat="server" CssClass="gamesbox">
             </asp:Panel>
         </div>
-        <footer>
-        </footer>
     </form>
 </body>
 </html>

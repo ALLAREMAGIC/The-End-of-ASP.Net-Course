@@ -29,16 +29,16 @@
             <span style="vertical-align: middle; font-size: 30px;">游戏详情</span>
             <div class="gamecontentbox">
                 <div>
-                    <div style="height: 119px">
+                    <div style="min-height: 119px;overflow:hidden;" >
                         <asp:Image ID="ImgGameLogo" runat="server" CssClass="game-logo" />
-                        <div style="float: left; width: 80%;">
+                        
                             <asp:Label ID="lblGameName" runat="server" CssClass="gamespan-title"></asp:Label>
                             <br />
                             <br />
                             <div class="gamespan-intro">
                                 <asp:Label ID="lblGameIntro" runat="server" CssClass="gamespan-intro"></asp:Label>
                             </div>
-                        </div>
+                        
                     </div>
                     <br />
                     <br />
