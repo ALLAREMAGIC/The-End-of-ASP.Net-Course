@@ -62,8 +62,10 @@ public partial class Pages_Normal_GamesIndex : System.Web.UI.Page
                 pnlGamebox.Controls.Add(new Image() { ID = "ImgGameLogo" + i, CssClass = "gamelogo", ImageUrl = "../../Images/" + gameList[i].Image });
 
                 pnlGamebox.Controls.Add(new Literal() { Text = "<br/>" });
+                pnlGamebox.Controls.Add(new Literal() { Text = "<br/>" });
                 pnlGamebox.Controls.Add(new HyperLink() { ID = "hplGameTitle" + i, CssClass = "gamespan-title", Text = gameList[i].Name, NavigateUrl = "GameContent.aspx?gameid=" + gameList[i].GameId, Target = "_blank" });
 
+                pnlGamebox.Controls.Add(new Literal() { Text = "<br/>" });
                 pnlGamebox.Controls.Add(new Literal() { Text = "<br/>" });
                 //创建游戏介绍label控件
                 pnlGamebox.Controls.Add(new HyperLink() { Text = "点击查看更多", CssClass = "pressmore", NavigateUrl = "GameContent.aspx?gameid=" + gameList[i].GameId, Target = "_blank" });

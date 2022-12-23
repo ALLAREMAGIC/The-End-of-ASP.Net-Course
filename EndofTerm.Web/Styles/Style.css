@@ -1,38 +1,53 @@
 /*神奇望制作：
 http://magicwang.club/
 */
-a:active {
-    text-decoration: none;
+a {
+    border: 0;
+    border-radius: 10px;
+    background-color: transparent;
+    font-size: 16px;
 }
 
-a:hover {
-    text-decoration: underline;
-}
+    a:active {
+        text-decoration: none;
+    }
 
-a:link {
-    text-decoration: none;
-}
+    a:hover {
+        text-decoration: none;
+        border-bottom-right-radius: 50px;
+        border-top-left-radius: 50px;
+        border-bottom-left-radius: 50px;
+        border-top-right-radius: 50px;
+    }
 
-a.navlink:hover {
-    text-decoration: underline;
-}
+    a:link {
+        text-decoration: none;
+    }
 
-a.navlink:link {
-    text-decoration: none;
-}
+    a.navlink:hover {
+        text-decoration: none;
+        border-bottom-right-radius: 50px;
+        border-top-left-radius: 50px;
+        border-bottom-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
 
-a.navlink:visited {
-    text-decoration: none;
-}
+    a.navlink:link {
+        text-decoration: none;
+    }
 
-a:visited {
-    text-decoration: none;
-}
+    a.navlink:visited {
+        text-decoration: none;
+    }
+
+    a:visited {
+        text-decoration: none;
+    }
 
 body {
     font-size: 15px;
     margin: 0px;
-    background-color: #fffeee;
+    background-color: #ffffcc;
     text-align: center;
     height: 685px;
 }
@@ -45,46 +60,33 @@ form {
 }
 
 .footer {
-    width: 778px;
+    width: 100%;
     margin: 5px auto;
-    text-align: left;
+    text-align: center;
     padding: 6px;
     border: 2px solid #000000;
-    color: #000000;
+    color: green;
+    animation: headerboxAni 3s infinite linear;
+    filter: hue-rotate(360deg);
 }
 
 .header {
     border-color: inherit;
     border-width: medium;
-    width: 760px;
-    height: 40px;
-    margin: 0 auto;
-    padding: 4px 2px 2px 10px;
-    text-align: left;
+    min-width: 760px;
+    min-height: 40px;
+    margin: auto;
+    padding: 10px 20% 10px 20%;
+    text-align: center;
+    overflow: hidden;
     /*background-color: #fffeee;*/
 }
 
     .header .logo {
         vertical-align: middle;
-        height: 35px;
-        width: 35px;
+        max-width: 50px;
         float: left;
     }
-
-    .header ul {
-        width: 490px;
-        float: right;
-        height: 16px;
-    }
-
-        .header ul li {
-            width: 96px;
-            text-align: center;
-        }
-
-            .header ul li a:hover {
-                background-color: #000000;
-            }
 
     .header .status {
         width: 400px;
@@ -127,7 +129,7 @@ form {
 .typebox-title {
     overflow: hidden;
     margin: auto;
-    width: 80%;
+    width: 60%;
 }
 
     .typebox-title .gamesbox-title {
@@ -160,10 +162,11 @@ form {
     }
 
 .gamelongbox {
+    background-color: #FFCC33;
     text-align: center;
     width: 80%;
     min-height: 111px;
-    border: 3px solid gold;
+    border: 3px solid #9999FF;
     border-radius: 10px;
     padding: 30px;
     margin: 20px auto;
@@ -186,17 +189,19 @@ form {
     }
 
     .gamelongbox .gamelogo {
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
         float: left;
         width: 20%;
         vertical-align: middle;
     }
 
 .gamebox {
+    background-color: #FFCC33;
     float: left;
     text-align: center;
     width: 20%;
     min-height: 111px;
-    border: 3px solid gold;
+    border: 3px solid #9999FF;
     border-radius: 5%;
     padding: 30px;
     margin: 20px auto;
@@ -219,6 +224,7 @@ form {
     }
 
     .gamebox .gamelogo {
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
         text-align: center;
         width: 100%;
     }
@@ -309,6 +315,7 @@ form {
     }
 
     .gamecontentbox .game-logo {
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
         min-height: 111px;
         width: 20% auto;
         float: left;

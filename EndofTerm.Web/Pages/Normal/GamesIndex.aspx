@@ -196,7 +196,7 @@
         </div>
         </div>--%>
             <footer>
-                <div style="color: green;">神奇望出品</div>
+                <div>神奇望</div>
             </footer>
     </form>
 </body>

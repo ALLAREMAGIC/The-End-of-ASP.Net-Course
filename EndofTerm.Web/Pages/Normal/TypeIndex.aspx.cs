@@ -59,14 +59,16 @@ public partial class Pages_Normal_TypeIndex : System.Web.UI.Page
     private Panel CreateGameBox(int i, List<Games> gameList)
     {
         Panel pnl = new Panel() { ID = "div0" + i.ToString(), CssClass = "gamelongbox" };
-        //创建游戏logo的image控件
+        //创建游戏logo
         pnl.Controls.Add(new Image() { ID = "ImgGameLogo" + i, CssClass = "gamelogo", ImageUrl = "../../Images/" + gameList[i].Image });
 
         pnl.Controls.Add(new Literal() { Text = "<br/>" });
+
+        //创建游戏标题跳转
         pnl.Controls.Add(new HyperLink() { ID = "hplGameTitle" + i, CssClass = "gamespan-title", Text = gameList[i].Name, NavigateUrl = "GameContent.aspx?gameid=" + gameList[i].GameId, Target = "_blank" });
 
         pnl.Controls.Add(new Literal() { Text = "<br/>" });
-        //创建游戏介绍label控件
+        //创建游戏详情跳转
         pnl.Controls.Add(new HyperLink() { Text = "点击查看更多", CssClass = "pressmore", NavigateUrl = "GameContent.aspx?gameid=" + gameList[i].GameId, Target = "_blank" });
         return pnl;
     }
